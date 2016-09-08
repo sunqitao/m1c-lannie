@@ -1,0 +1,30 @@
+group 'cn.m1c.lannie'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin :'maven'//添加Maven插件
+apply plugin :'idea'//添加Maven插件
+
+//指定编码环境
+sourceCompatibility = 1.8
+//指定编译环境
+targetCompatibility = 1.8
+//设置编码
+tasks.withType(JavaCompile){
+    options.encoding = "UTF-8"
+}
+//创建java文档
+task createJavadoc(type: Javadoc){
+    source = sourceSets.main.allJava
+}
+
+
+repositories {
+    maven { url 'http://repo.maven.apache.org/maven2' }
+    mavenLocal()//添加maven本地仓库
+    mavenCentral()//添加maven中央仓库
+}
+
+dependencies {
+    compile('cn.m1c.lannie:m1c-lannie-common:1.0-SNAPSHOT')
+     }
