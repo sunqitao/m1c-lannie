@@ -4,6 +4,8 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin :'maven'//添加Maven插件
 apply plugin :'idea'//添加Maven插件
+apply plugin: 'signing' //使用signing plugin做数字签名 
+
 
 //指定编码环境
 sourceCompatibility = 1.8
@@ -60,3 +62,8 @@ dependencies {
     compile group: 'org.springframework', name: 'spring-test', version: spring_version
     compile group: 'org.springframework', name: 'spring-aspects', version: spring_version
 }
+
+
+
+//上传jar到中央仓库用的
+apply from: 'https://raw.githubusercontent.com/gam2046/gradle-mvn-push/master/gradle-mvn-push.gradle'
