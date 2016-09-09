@@ -36,8 +36,6 @@ public interface BaseService {
     //根据对象查询列表
 	@DataSource("slave")
     public List<BaseModel> queryByModel(BaseModel model);
-/**
- * 子类中必须要覆盖实现
- */
+// 子类中必须要覆盖实现
     public abstract IBaseDao getDao();
 }

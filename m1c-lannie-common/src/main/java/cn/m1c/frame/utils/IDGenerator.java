@@ -17,8 +17,8 @@ public class IDGenerator{
 
 	/**
 	 * 获取唯一主键ID
-	 * @return
-	 * @throws Exception
+	 * 返回
+	 * 异常 Exception
 	 */
 	public static synchronized long getUniqueID(){
 
@@ -39,9 +39,9 @@ public class IDGenerator{
 	 * 生成唯一ID,该ID的dbIndex与sourceID一至
 	 * 注：最大支持库      ：512个
 	 *     最大支持时间：4240-01-01
-	 * @param sourceID，如主站web、wap、xx客户端
-	 * @return
-	 * @throws Exception
+	 * 参数 sourceID，如主站web、wap、xx客户端
+	 * 返回
+	 * 异常 Exception
 	 */
 	public static synchronized long getUniqueID(long sourceId){
 		int sourceIndex = getDBIndex(sourceId);
@@ -61,8 +61,8 @@ public class IDGenerator{
 
 	/**
 	 * 获取ID所对应该的数据库编号
-	 * @param ID
-	 * @return 数据库
+	 * 参数 ID
+	 * 返回 数据库
 	 */
 	public static int getDBIndex(long id) {
 		return (int)((id >> 8) & (DB_COUNT - 1));

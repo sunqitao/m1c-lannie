@@ -32,10 +32,6 @@ public abstract class MongoDaoUtil {
 
 	/**
 	 * 绑定分页
-	 * @param entityName
-	 * @param mongoOperations
-	 * @param query
-	 * @param page
 	 */
 	public static void bindPaging(Class<?> entityName, MongoOperations mongoOperations, Query query, PageM1C page){
 		if(page == null){
@@ -62,8 +58,6 @@ public abstract class MongoDaoUtil {
 
 	/**
 	 * 绑定排序
-	 * @param query
-	 * @param orderBean
 	 */
 	public static void bindOrders(Query query, OrderBean orderBean){
 		if(orderBean == null){
@@ -78,9 +72,7 @@ public abstract class MongoDaoUtil {
 
 
 	/**
-	 * 定制字段
-	 * @param query
-	 * @param fields 指定的字段，多个须以逗号隔开，支持*号
+	 * 定制字段   fields 指定的字段，多个须以逗号隔开，支持*号
 	 */
 	public static void bindFields(Query query, String fields){
 		if(StringUtil.hasLengthBytrim(fields) && !"*".equals(fields)){
@@ -126,9 +118,6 @@ public abstract class MongoDaoUtil {
 	
 	/**
 	 * 根据主键和值构建查询对象
-	 * @param id
-	 * @param value
-	 * @return
 	 */
 	public static Query parseQuery(String id, Object value){
 		Criteria critera = Criteria.where(id).is(value);

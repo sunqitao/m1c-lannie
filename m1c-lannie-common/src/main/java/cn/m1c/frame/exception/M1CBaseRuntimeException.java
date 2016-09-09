@@ -30,9 +30,6 @@ public abstract class M1CBaseRuntimeException extends RuntimeException {
 	}
 	/**
 	 * 为基本信息和根异常绑定消息
-	 * @param message
-	 * @param cause
-	 * @return message
 	 */
 	public static String buildMessage(String message, Throwable cause) {
 		if (cause != null) {
@@ -48,8 +45,7 @@ public abstract class M1CBaseRuntimeException extends RuntimeException {
 		}
 	}
 	/**
-	 * 获取异常根原因
-	 * @return 如果没有向上追溯到原因，则返回自己。
+	 * 获取异常根原因  如果没有向上追溯到原因，则返回自己。
 	 */
 	public Throwable getRootCause(){
 		Throwable rootCause = null;
@@ -63,8 +59,6 @@ public abstract class M1CBaseRuntimeException extends RuntimeException {
 	
 	/**
 	 * 判断是否异常包含一个给定类型的异常
-	 * @param exceptionClass
-	 * @return
 	 */
 	public boolean contains(Class<?> exceptionClass) {
 		if (exceptionClass == null) {

@@ -23,8 +23,6 @@ public class MongoDbUtil {
 	
 	/**
 	 * 更新字段，hashmap转update
-	 * @param values
-	 * @return
 	 */
 	public static Update toUpdate( Map<String, Object> values ){
 		Update update = new Update();
@@ -36,10 +34,6 @@ public class MongoDbUtil {
 	
 	/**
 	 * 绑定分页
-	 * @param entityName
-	 * @param mongoOperations
-	 * @param query
-	 * @param page
 	 */
 	public static void bindPaging(Class<?> entityName, MongoOperations mongoOperations, Query query, PageM1C page){
 		if(page == null){
@@ -53,8 +47,6 @@ public class MongoDbUtil {
 	
 	/**
 	 * 绑定排序
-	 * @param query
-	 * @param orderBean
 	 */
 	public static void bindOrders(Query query, OrderBean orderBean){
 		if(orderBean == null){
@@ -68,8 +60,6 @@ public class MongoDbUtil {
 	
 	/**
 	 * 定制字段
-	 * @param query
-	 * @param fields 指定的字段，多个以*号隔开
 	 */
 	public static void bindFields(Query query, String fields){
 		if(StringUtil.hasLengthBytrim(fields)){

@@ -40,8 +40,8 @@ public abstract class StringUtil {
 	 * StringUtils.hasLength(" ") = true
 	 * StringUtils.hasLength("Hello") = true
 	 * </pre>
-	 * @param str the CharSequence to check (may be <code>null</code>)
-	 * @return <code>true</code> if the CharSequence is not null and has length
+	 * 参数 str the CharSequence to check (may be <code>null</code>)
+	 * 返回 <code>true</code> if the CharSequence is not null and has length
 	 * @see #hasText(String)
 	 */
 	public static boolean hasLength(CharSequence str) {
@@ -50,8 +50,8 @@ public abstract class StringUtil {
 
 	/**
 	 * 检查包含空白字符在内的字符系列长度
-	 * @param str the String to check (may be <code>null</code>)
-	 * @return <code>true</code> if the String is not null and has length
+	 * 参数 str the String to check (may be <code>null</code>)
+	 * 返回 <code>true</code> if the String is not null and has length
 	 * @see #hasLength(CharSequence)
 	 */
 	public static boolean hasLength(String str) {
@@ -60,8 +60,8 @@ public abstract class StringUtil {
 
 	/**
 	 * 检查字符串过滤前后空白后的长度
-	 * @param str
-	 * @return boolean
+	 * 参数 str
+	 * 返回 boolean
 	 */
 	public static boolean hasLengthAfterTrimWhiteSpace(String str) {
 		return str != null && str.trim().length() > 0;
@@ -81,8 +81,8 @@ public abstract class StringUtil {
 	 * StringUtils.hasText("12345") = true
 	 * StringUtils.hasText(" 12345 ") = true
 	 * </pre>
-	 * @param str the CharSequence to check (may be <code>null</code>)
-	 * @return <code>true</code> if the CharSequence is not <code>null</code>,
+	 * 参数 str the CharSequence to check (may be <code>null</code>)
+	 * 返回 <code>true</code> if the CharSequence is not <code>null</code>,
 	 * its length is greater than 0, and it does not contain whitespace only
 	 * @see Character#isWhitespace
 	 */
@@ -103,8 +103,8 @@ public abstract class StringUtil {
 	 * Check whether the given String has actual text.
 	 * More specifically, returns <code>true</code> if the string not <code>null</code>,
 	 * its length is greater than 0, and it contains at least one non-whitespace character.
-	 * @param str the String to check (may be <code>null</code>)
-	 * @return <code>true</code> if the String is not <code>null</code>, its length is
+	 * 参数 str the String to check (may be <code>null</code>)
+	 * 返回 <code>true</code> if the String is not <code>null</code>, its length is
 	 * greater than 0, and it does not contain whitespace only
 	 * @see #hasText(CharSequence)
 	 */
@@ -118,13 +118,13 @@ public abstract class StringUtil {
 	/**
 	 * 根据匹配串是提取占位符中的值
 	 *
-	 * @param url
+	 * 参数 url
 	 *            原字符串
-	 * @param ref
+	 * 参数 ref
 	 *            匹配串
-	 * @param placeholder
+	 * 参数 placeholder
 	 *            占位符
-	 * @return 占位符中的值
+	 * 返回 占位符中的值
 	 *
 	 * 示例: String ref = "list_*.html"; String url = "xxx/list_2578.html?a=1"; System.out.println(getParamValueInPlaceholder(url, ref, "\\*"));
 	 */
@@ -157,10 +157,10 @@ public abstract class StringUtil {
 	/**
 	 * 截串
 	 *
-	 * @param source
-	 * @param length
-	 * @param fill
-	 * @return
+	 * 参数 source
+	 * 参数 length
+	 * 参数 fill
+	 * 返回
 	 */
 	public static String getStringByLength(String source, int length, String fill) {
 		if (source == null)
@@ -172,8 +172,8 @@ public abstract class StringUtil {
 
 	/**
 	 * getter方法名
-	 * @param fieldName
-	 * @return
+	 * 参数 fieldName
+	 * 返回
 	 */
 	public static String getterName(String fieldName) {
 		if (fieldName != null && !"".equals(fieldName)) {
@@ -184,8 +184,8 @@ public abstract class StringUtil {
 
 	/**
 	 * setter方法名
-	 * @param fieldName
-	 * @return
+	 * 参数 fieldName
+	 * 返回
 	 */
 	public static String setterName(String fieldName) {
 		if (fieldName != null && !"".equals(fieldName)) {
@@ -196,8 +196,8 @@ public abstract class StringUtil {
 
 	/**
 	 * 通过getter&setter方法名取得字段名
-	 * @param getterMethodName
-	 * @return
+	 * 参数 getterMethodName
+	 * 返回
 	 */
 	public static String fieldName(String getterMethodName) {
 		if(hasLengthAfterTrimWhiteSpace(getterMethodName) && getterMethodName.startsWith("get")){
@@ -208,8 +208,8 @@ public abstract class StringUtil {
 
 	/**
 	 * 转换到Josn格式
-	 * @param s
-	 * @return
+	 * 参数 s
+	 * 返回
 	 */
 	public static String string2Json(String s) {
 	    StringBuilder sb = new StringBuilder(s.length() + 20);
@@ -270,9 +270,9 @@ public abstract class StringUtil {
 	/**
 	 * 复制字符串
 	 *
-	 * @param cs 字符串
-	 * @param num 数量
-	 * @return 新字符串
+	 * 参数 cs 字符串
+	 * 参数 num 数量
+	 * 返回 新字符串
 	 */
 	public static String dup(CharSequence cs, int num) {
 		if (isEmpty(cs) || num <= 0)
@@ -286,11 +286,11 @@ public abstract class StringUtil {
 	/**
 	 * 复制字符
 	 *
-	 * @param c
+	 * 参数 c
 	 *            字符
-	 * @param num
+	 * 参数 num
 	 *            数量
-	 * @return 新字符串
+	 * 返回 新字符串
 	 */
 	public static String dup(char c, int num) {
 		if (c == 0 || num < 1)
@@ -303,8 +303,8 @@ public abstract class StringUtil {
 
 	/**
 	 * 将字符串首字母大写
-	 * @param s 字符串
-	 * @return 首字母大写后的新字符串
+	 * 参数 s 字符串
+	 * 返回 首字母大写后的新字符串
 	 */
 	public static String capitalize(CharSequence s) {
 		if (null == s)
@@ -322,8 +322,8 @@ public abstract class StringUtil {
 
 	/**
 	 * 将字符串首字母小写
-	 * @param s 字符串
-	 * @return 首字母小写后的新字符串
+	 * 参数 s 字符串
+	 * 返回 首字母小写后的新字符串
 	 */
 	public static String lowerFirst(CharSequence s) {
 		if (null == s)
@@ -342,9 +342,9 @@ public abstract class StringUtil {
 	/**
 	 * 检查两个字符串的忽略大小写后是否相等.
 	 *
-	 * @param s1 字符串A
-	 * @param s2 字符串B
-	 * @return true 如果两个字符串忽略大小写后相等,且两个字符串均不为null
+	 * 参数 s1 字符串A
+	 * 参数 s2 字符串B
+	 * 返回 true 如果两个字符串忽略大小写后相等,且两个字符串均不为null
 	 */
 	public static boolean equalsIgnoreCase(String s1, String s2) {
 		return s1 == null ? s2 == null : s1.equalsIgnoreCase(s2);
@@ -353,9 +353,9 @@ public abstract class StringUtil {
 	/**
 	 * 检查两个字符串是否相等.
 	 *
-	 * @param s1 字符串A
-	 * @param s2 字符串B
-	 * @return true 如果两个字符串相等,且两个字符串均不为null
+	 * 参数 s1 字符串A
+	 * 参数 s2 字符串B
+	 * 返回 true 如果两个字符串相等,且两个字符串均不为null
 	 */
 	public static boolean equals(String s1, String s2) {
 		return s1 == null ? s2 == null : s1.equals(s2);
@@ -364,9 +364,9 @@ public abstract class StringUtil {
 	/**
 	 * 判断字符串是否以特殊字符开头
 	 *
-	 * @param s 字符串
-	 * @param c 特殊字符
-	 * @return 是否以特殊字符开头
+	 * 参数 s 字符串
+	 * 参数 c 特殊字符
+	 * 返回 是否以特殊字符开头
 	 */
 	public static boolean startsWithChar(String s, char c) {
 		return null != s ? (s.length() == 0 ? false : s.charAt(0) == c) : false;
@@ -375,25 +375,25 @@ public abstract class StringUtil {
 	/**
 	 * 判断字符串是否以特殊字符结尾
 	 *
-	 * @param s 字符串
-	 * @param c 特殊字符
-	 * @return 是否以特殊字符结尾
+	 * 参数 s 字符串
+	 * 参数 c 特殊字符
+	 * 返回 是否以特殊字符结尾
 	 */
 	public static boolean endsWithChar(String s, char c) {
 		return null != s ? (s.length() == 0 ? false : s.charAt(s.length() - 1) == c) : false;
 	}
 
 	/**
-	 * @param cs 字符串
-	 * @return 是不是为空字符串
+	 * 参数 cs 字符串
+	 * 返回 是不是为空字符串
 	 */
 	public static boolean isEmpty(CharSequence cs) {
 		return null == cs || cs.length() == 0;
 	}
 
 	/**
-	 * @param cs 字符串
-	 * @return 是不是为空白字符串
+	 * 参数 cs 字符串
+	 * 返回 是不是为空白字符串
 	 */
 	public static boolean isBlank(CharSequence cs) {
 		if (null == cs)
@@ -409,8 +409,8 @@ public abstract class StringUtil {
 	/**
 	 * 去掉字符串前后空白
 	 *
-	 * @param cs 字符串
-	 * @return 新字符串
+	 * 参数 cs 字符串
+	 * 返回 新字符串
 	 */
 	public static String trim(CharSequence cs) {
 		if (null == cs)
@@ -441,9 +441,9 @@ public abstract class StringUtil {
 	/**
 	 * 将字符串按半角逗号，拆分成数组，空元素将被忽略
 	 *
-	 * @param s
+	 * 参数 s
 	 *            字符串
-	 * @return 字符串数组
+	 * 返回 字符串数组
 	 */
 	public static String[] splitIgnoreBlank(String s) {
 		return StringUtil.splitIgnoreBlank(s, ",");
@@ -451,9 +451,9 @@ public abstract class StringUtil {
 
 	/**
 	 * 根据一个正则式，将字符串拆分成数组，空元素将被忽略
-	 * @param s 字符串
-	 * @param regex 正则式
-	 * @return 字符串数组
+	 * 参数 s 字符串
+	 * 参数 regex 正则式
+	 * 返回 字符串数组
 	 */
 	public static String[] splitIgnoreBlank(String s, String regex) {
 		if (null == s)
@@ -471,9 +471,9 @@ public abstract class StringUtil {
 	/**
 	 * 将一个整数转换成最小长度为某一固定数值的十进制形式字符串
 	 *
-	 * @param d 整数
-	 * @param width 宽度
-	 * @return 新字符串
+	 * 参数 d 整数
+	 * 参数 width 宽度
+	 * 返回 新字符串
 	 */
 	public static String fillDigit(int d, int width) {
 		return alignRight(String.valueOf(d), width, '0');
@@ -482,11 +482,11 @@ public abstract class StringUtil {
 	/**
 	 * 将一个整数转换成最小长度为某一固定数值的十六进制形式字符串
 	 *
-	 * @param d
+	 * 参数 d
 	 *            整数
-	 * @param width
+	 * 参数 width
 	 *            宽度
-	 * @return 新字符串
+	 * 返回 新字符串
 	 */
 	public static String fillHex(int d, int width) {
 		return alignRight(Integer.toHexString(d), width, '0');
@@ -495,9 +495,9 @@ public abstract class StringUtil {
 	/**
 	 * 将一个整数转换成最小长度为某一固定数值的二进制形式字符串
 	 *
-	 * @param d 整数
-	 * @param width 宽度
-	 * @return 新字符串
+	 * 参数 d 整数
+	 * 参数 width 宽度
+	 * 返回 新字符串
 	 */
 	public static String fillBinary(int d, int width) {
 		return alignRight(Integer.toBinaryString(d), width, '0');
@@ -506,9 +506,9 @@ public abstract class StringUtil {
 	/**
 	 * 将一个整数转换成固定长度的十进制形式字符串
 	 *
-	 * @param d 整数
-	 * @param width 宽度
-	 * @return 新字符串
+	 * 参数 d 整数
+	 * 参数 width 宽度
+	 * 返回 新字符串
 	 */
 	public static String toDigit(int d, int width) {
 		return StringUtil.cutRight(String.valueOf(d), width, '0');
@@ -517,9 +517,9 @@ public abstract class StringUtil {
 	/**
 	 * 将一个整数转换成固定长度的十六进制形式字符串
 	 *
-	 * @param d 整数
-	 * @param width 宽度
-	 * @return 新字符串
+	 * 参数 d 整数
+	 * 参数 width 宽度
+	 * 返回 新字符串
 	 */
 	public static String toHex(int d, int width) {
 		return StringUtil.cutRight(Integer.toHexString(d), width, '0');
@@ -528,9 +528,9 @@ public abstract class StringUtil {
 	/**
 	 * 将一个整数转换成固定长度的二进制形式字符串
 	 *
-	 * @param d 整数
-	 * @param width 宽度
-	 * @return 新字符串
+	 * 参数 d 整数
+	 * 参数 width 宽度
+	 * 返回 新字符串
 	 */
 	public static String toBinary(int d, int width) {
 		return StringUtil.cutRight(Integer.toBinaryString(d), width, '0');
@@ -539,10 +539,10 @@ public abstract class StringUtil {
 	/**
 	 * 保证字符串为一固定长度。超过长度，切除，否则补字符。
 	 *
-	 * @param s 字符串
-	 * @param width 长度
-	 * @param c 补字符
-	 * @return 修饰后的字符串
+	 * 参数 s 字符串
+	 * 参数 width 长度
+	 * 参数 c 补字符
+	 * 返回 修饰后的字符串
 	 */
 	public static String cutRight(String s, int width, char c) {
 		if (null == s)
@@ -558,10 +558,10 @@ public abstract class StringUtil {
 	/**
 	 * 在字符串左侧填充一定数量的特殊字符
 	 *
-	 * @param cs 字符串
-	 * @param width 字符数量
-	 * @param c 字符
-	 * @return 新字符串
+	 * 参数 cs 字符串
+	 * 参数 width 字符数量
+	 * 参数 c 字符
+	 * 返回 新字符串
 	 */
 	public static String alignRight(CharSequence cs, int width, char c) {
 		if (null == cs)
@@ -575,10 +575,10 @@ public abstract class StringUtil {
 	/**
 	 * 在字符串右侧填充一定数量的特殊字符
 	 *
-	 * @param cs 字符串
-	 * @param width 字符数量
-	 * @param c 字符
-	 * @return 新字符串
+	 * 参数 cs 字符串
+	 * 参数 width 字符数量
+	 * 参数 c 字符
+	 * 返回 新字符串
 	 */
 	public static String alignLeft(CharSequence cs, int width, char c) {
 		if (null == cs)
@@ -590,13 +590,13 @@ public abstract class StringUtil {
 	}
 
 	/**
-	 * @param cs
+	 * 参数 cs
 	 *            字符串
-	 * @param lc
+	 * 参数 lc
 	 *            左字符
-	 * @param rc
+	 * 参数 rc
 	 *            右字符
-	 * @return 字符串是被左字符和右字符包裹 -- 忽略空白
+	 * 返回 字符串是被左字符和右字符包裹 -- 忽略空白
 	 */
 	public static boolean isQuoteByIgnoreBlank(CharSequence cs, char lc, char rc) {
 		if (null == cs)
@@ -621,13 +621,13 @@ public abstract class StringUtil {
 	}
 
 	/**
-	 * @param cs
+	 * 参数 cs
 	 *            字符串
-	 * @param lc
+	 * 参数 lc
 	 *            左字符
-	 * @param rc
+	 * 参数 rc
 	 *            右字符
-	 * @return 字符串是被左字符和右字符包裹
+	 * 返回 字符串是被左字符和右字符包裹
 	 */
 	public static boolean isQuoteBy(CharSequence cs, char lc, char rc) {
 		if (null == cs)
@@ -639,8 +639,8 @@ public abstract class StringUtil {
 	/**
 	 * 获得一个字符串集合中，最长串的长度
 	 *
-	 * @param coll 字符串集合
-	 * @return 最大长度
+	 * 参数 coll 字符串集合
+	 * 返回 最大长度
 	 */
 	public static int maxLength(Collection<? extends CharSequence> coll) {
 		int re = 0;
@@ -654,9 +654,9 @@ public abstract class StringUtil {
 	/**
 	 * 获得一个字符串数组中，最长串的长度
 	 *
-	 * @param array
+	 * 参数 array
 	 *            字符串数组
-	 * @return 最大长度
+	 * 返回 最大长度
 	 */
 	public static <T extends CharSequence> int maxLength(T[] array) {
 		int re = 0;
@@ -670,8 +670,8 @@ public abstract class StringUtil {
 	/**
 	 * 对obj进行toString()操作,如果为null返回""
 	 *
-	 * @param obj
-	 * @return obj.toString()
+	 * 参数 obj
+	 * 返回 obj.toString()
 	 */
 	public static String sNull(Object obj) {
 		return sNull(obj, "");
@@ -680,10 +680,10 @@ public abstract class StringUtil {
 	/**
 	 * 对obj进行toString()操作,如果为null返回def中定义的值
 	 *
-	 * @param obj
-	 * @param defaultValue
+	 * 参数 obj
+	 * 参数 defaultValue
 	 *            如果obj==null返回的内容
-	 * @return obj的toString()操作
+	 * 返回 obj的toString()操作
 	 */
 	public static String sNull(Object obj, String defaultValue) {
 		return obj != null ? obj.toString() : defaultValue;
@@ -692,8 +692,8 @@ public abstract class StringUtil {
 	/**
 	 * 对obj进行toString()操作,如果为空串返回""
 	 *
-	 * @param obj
-	 * @return obj.toString()
+	 * 参数 obj
+	 * 返回 obj.toString()
 	 */
 	public static String sBlank(Object obj) {
 		return sBlank(obj, "");
@@ -702,10 +702,10 @@ public abstract class StringUtil {
 	/**
 	 * 对obj进行toString()操作,如果为空串返回def中定义的值
 	 *
-	 * @param obj
-	 * @param def
+	 * 参数 obj
+	 * 参数 def
 	 *            如果obj==null返回的内容
-	 * @return obj的toString()操作
+	 * 返回 obj的toString()操作
 	 */
 	public static String sBlank(Object obj, String def) {
 		if (null == obj)
@@ -723,9 +723,9 @@ public abstract class StringUtil {
 	 * <li>removeFirst("A") => ""
 	 * </ul>
 	 *
-	 * @param str
+	 * 参数 str
 	 *            字符串
-	 * @return 新字符串
+	 * 返回 新字符串
 	 */
 	public static String removeFirst(CharSequence str) {
 		if (str == null)
@@ -746,11 +746,11 @@ public abstract class StringUtil {
 	 * <li>removeFirst("A",'A') => ""
 	 * </ul>
 	 *
-	 * @param str
+	 * 参数 str
 	 *            字符串
-	 * @param c
+	 * 参数 c
 	 *            第一个个要被截取的字符
-	 * @return 新字符串
+	 * 返回 新字符串
 	 */
 	public static String removeFirst(String str, char c) {
 		return (StringUtil.isEmpty(str) || c != str.charAt(0)) ? str : str.substring(1);
@@ -759,11 +759,11 @@ public abstract class StringUtil {
 	/**
 	 * 判断一个字符串数组是否包括某一字符串
 	 *
-	 * @param ss
+	 * 参数 ss
 	 *            字符串数组
-	 * @param s
+	 * 参数 s
 	 *            字符串
-	 * @return 是否包含
+	 * 返回 是否包含
 	 */
 	public static boolean isin(String[] ss, String s) {
 		if (null == ss || ss.length == 0 || StringUtil.isBlank(s))
@@ -779,15 +779,15 @@ public abstract class StringUtil {
 	 * 将一个字符串某一个字符后面的字母变成大写，比如
 	 *
 	 * <pre>
-	 *  upperWord("hello-world", '-') => "helloWorld"
+	 *  upperWord("hello-world", '-') 》 "helloWorld"
 	 * </pre>
 	 *
-	 * @param s
+	 * 参数 s
 	 *            字符串
-	 * @param c
+	 * 参数 c
 	 *            字符
 	 *
-	 * @return 转换后字符串
+	 * 返回 转换后字符串
 	 */
 	public static String upperWord(CharSequence s, char c) {
 		StringBuilder sb = new StringBuilder();
@@ -818,11 +818,11 @@ public abstract class StringUtil {
 
 	/**
      * 根据某种编码方式将字节数组转换成字符串
-     * @param b 字节数组
-     * @param offset 要转换的起始位置
-     * @param len 要转换的长度
-     * @param encoding 编码方式
-     * @return 如果encoding不支持，返回一个缺省编码的字符串
+     * 参数 b 字节数组
+     * 参数 offset 要转换的起始位置
+     * 参数 len 要转换的长度
+     * 参数 encoding 编码方式
+     * 返回 如果encoding不支持，返回一个缺省编码的字符串
      */
     public static String getString(byte[] b, int offset, int len, String encoding) {
         try {
@@ -909,8 +909,8 @@ public abstract class StringUtil {
 	
 	 /**
 	  * 清除 小数末尾精度多余0 
-	  * @param str(9.12000)
-	  * @return 9012
+	  * 参数 str(9.12000)
+	  * 返回 9012
 	  */
 	 public static String trimZero(String str) {
 	  if (str.indexOf(".") != -1 && str.charAt(str.length() - 1) == '0') {
@@ -925,9 +925,9 @@ public abstract class StringUtil {
 	 /** 
 	     * List转换String 
 	     *  
-	     * @param list 
+	     * 参数 list 
 	     *            :需要转换的List 
-	     * @return String转换后的字符串 
+	     * 返回 String转换后的字符串 
       */  
      public static String ListToString(List<?> list,String sep) {  
         StringBuffer sb = new StringBuffer();  
@@ -945,10 +945,10 @@ public abstract class StringUtil {
      
      /**
       * 把字符串的除了前m位和后n位，其余位用“*”号代替
-      * @param str 要代替的字符串
-      * @param m 不做变化的前m位数
-      * @param n 不做变化后n位数
-      * @return
+      * 参数 str 要代替的字符串
+      * 参数 m 不做变化的前m位数
+      * 参数 n 不做变化后n位数
+      * 返回
      */
      public static String replaceSubString(String str, int m, int n) {
          if(str == null) {
@@ -970,8 +970,8 @@ public abstract class StringUtil {
      
      /**
       * 截取字符串后4位，不满4位返回空串
-      * @param str
-      * @return
+      * 参数 str
+      * 返回
       */
      public static String getLast4(String str){
     	 if(str!=null && str.length()>=4){

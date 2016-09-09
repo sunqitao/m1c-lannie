@@ -106,9 +106,7 @@ public class DateUtil {
 
 	/**
 	 * 判断一个字符串是否可以转成指定格式的日期
-	 * @param source 
-	 * @param pattern 日期格式
-	 * @return
+	 *  source, pattern 日期格式
 	 */
     public static boolean isValidDate(String source, String pattern) {
         boolean convertSuccess = true;
@@ -127,10 +125,9 @@ public class DateUtil {
     }
 	/**
 	 * 根据特定模式，将字符串型日期对象解析成Date对象
-	 * @param source要解析的字符串
-	 * @param pattern解析模式，默认为{@value #PATTERN_YYYY_MM_DD_HH_MM_SS}
-	 * @return 解析结果
-	 * @throws ParseException 如果要解析的字符串格式不匹配，则抛出此异常
+	 *  source 要解析的字符串, pattern 解析模式，默认为{@value #PATTERN_YYYY_MM_DD_HH_MM_SS}
+	 *  返回 解析结果
+	 * ParseException 如果要解析的字符串格式不匹配，则抛出此异常
 	 */
 	public static Date parse(final String source, String pattern)
 			throws ParseException {
@@ -151,10 +148,8 @@ public class DateUtil {
 
 	/**
 	 * 将日期对象根据特定格式格式化成字符串
-	 * 
-	 * @param source要格式化的日期对象
-	 * @param pattern格式化模式，默认为{@value #PATTERN_YYYY_MM_DD_HH_MM_SS}
-	 * @return 格式化后的字符串
+	 *  source要格式化的日期对象，  pattern格式化模式，默认为{@value #PATTERN_YYYY_MM_DD_HH_MM_SS}
+	 *   格式化后的字符串
 	 */
 	public static String format(final Date source, String pattern) {
 		// 检查value是否为空
@@ -174,8 +169,6 @@ public class DateUtil {
 	/**
 	 * 格式化到天
 	 * 
-	 * @param source
-	 * @return
 	 */
 	public static String formatToDay(final Date source) {
 		return format(source, PATTERN_YYYY_MM_DD);
@@ -184,8 +177,6 @@ public class DateUtil {
 	/**
 	 * 格式化日期到秒
 	 * 
-	 * @param source
-	 * @return
 	 */
 	public static String formatToSecond(final Date source) {
 		return format(source, PATTERN_YYYY_MM_DD_HH_MM_SS);
@@ -193,39 +184,31 @@ public class DateUtil {
 
 	/**
 	 * 格式化日期到分钟
-	 * @param source
-	 * @return
 	 */
 	public static String formatToMinute(final Date source) {
 		return format(source, PATTERN_YYYY_MM_DD_HH_MM);
 	}
 	/**
 	 * 格式化日期到小时
-	 * @param source
-	 * @return
 	 */
 	public static String formatToHour(final Date source){
 		return format(source,PATTERN_YYYY_MM_DD_HH);
 	}
 	/**
 	 * 03月01日15点
-	 * @param source
-	 * @return
 	 */
 	public static String formatToMonthHour(final Date source){
 		return format(source,PATTERN_MM_DD_HH);
 	}
 	/**
 	 * 返回服务器时间
-	 * @return
 	 */
 	public static Date getServerDate() {
 		return new Date();
 	}
 	/**
 	 * 判断特定时间距离当前服务器时间的毫秒数
-	 * @param date 要比较的时间
-	 * @return 比较结果，如果当前日期迟于要比较的时间则返回值小于零，反之大于零
+	 *   date 要比较的时间， 比较结果，如果当前日期迟于要比较的时间则返回值小于零，反之大于零
 	 */
 	public static long millisecondsBeforeNow(final Date source) {
 		// 检查日期对象是否存在
@@ -244,8 +227,8 @@ public class DateUtil {
 	 * （当前时间与发布时间）未超过一天（24小时）：则显示到小时，即xx小时前；<br/>
 	 * （当前时间与发布时间）超过一天（24小时）：则显示实际发布时间，年-月-日 时:分:秒；
 	 * </p>
-	 * @param source 要格式化的日期
-	 * @return 格式化结果
+	 *  source 要格式化的日期
+	 * 返回格式化结果
 	 */
 	public static String formatToFront(final Date source) {
 		// 获取相差的毫秒数
@@ -273,8 +256,6 @@ public class DateUtil {
 
 	/**
 	 * 获取日期相对于1970/01/01的时间戳
-	 * @param source 要比较的时间
-	 * @return 时间戳
 	 */
 	public static long getTime(final Date source){
 		if(source == null){
@@ -285,8 +266,6 @@ public class DateUtil {
 	
 	/**
 	 * 将秒转成分钟和秒字符串
-	 * @param second秒钟
-	 * @return xxm xxs
 	 */
 	public static String formatToFront(Integer second) {
 		long s = second % 60;
@@ -296,8 +275,8 @@ public class DateUtil {
 
 	/**
 	 * 特定日期和服务器日期相差的天数
-	 * @param source 要比较的日期
-	 * @return 天数，之后大于零，之前小于零
+	 * 入参 source 要比较的日期
+	 *  返回 天数，之后大于零，之前小于零
 	 */
 	public static int daysBeforeNow(final Date source) {
 		// 如果要比较的source不存在
@@ -325,8 +304,8 @@ public class DateUtil {
 
 	/**
 	 * 特定日期1  和  特定日期2  相差的天数
-	 * @param source 要比较的日期
-	 * @return 天数，之后大于零，之前小于零 
+	 * 入参 source 要比较的日期
+	 * 返回 天数，之后大于零，之前小于零 
 	 */
 	public static int daysBefore(final Date source1,final Date source2) {
 		// 如果要比较的source不存在
@@ -357,8 +336,8 @@ public class DateUtil {
 	
 	/**
 	 * 特定日期1  和  特定日期2  相差的天数
-	 * @param source 要比较的日期
-	 * @return 天数，之后大于零，之前小于零 
+	 * 参数 source 要比较的日期
+	 * 返回 天数，之后大于零，之前小于零 
 	 */
 	public static int daysBeforeSECOND(final Date source1,final Date source2) {
 		// 如果要比较的source不存在
@@ -380,9 +359,9 @@ public class DateUtil {
 	}
 	/**
 	 * 获取在某天的基础上增加或减少N天
-	 * @param date 某天
-	 * @param num加上或减少的天数，正数为加，负数为减。
-	 * @return
+	 * 参数 date 某天
+	 * 参数 num加上或减少的天数，正数为加，负数为减。
+	 * 返回
 	 */
 	public static Date getDateAfterDays(Date date, int days) {
 		Calendar c = Calendar.getInstance();
@@ -401,8 +380,8 @@ public class DateUtil {
 
 	/**
 	 * 获取指定日期是今年中的第几天
-	 * @param dateStr 日期字符串 格式：yyyy-MM-dd
-	 * @return 指定日期是今年中的第几天
+	 * 参数 dateStr 日期字符串 格式：yyyy-MM-dd
+	 * 返回 指定日期是今年中的第几天
 	 * @note 请不要输入2012-02-31、2012-13-32之类的非法日期字符串
 	 */
 	public static int getDayOfYear(String dateStr) {
@@ -412,8 +391,8 @@ public class DateUtil {
 
 	/**
 	 * 使用yyyy-MM-dd格式的日期字符串实例化一个Calendar对象
-	 * @param dateStr日期字符串 格式：yyyy-MM-dd
-	 * @return
+	 * 参数 dateStr日期字符串 格式：yyyy-MM-dd
+	 * 返回
 	 */
 	public static Calendar initCalendarByDateString(String dateStr) {
 		if (null != dateStr && !"".equals(dateStr.trim())
@@ -432,7 +411,7 @@ public class DateUtil {
 
 	/**
 	 * 获取今年总共有多少天
-	 * @return
+	 * 返回
 	 */
 	public static int getDaysOfThisYear() {
 		Calendar calendar = Calendar.getInstance();
@@ -445,9 +424,9 @@ public class DateUtil {
 	 * 根据type类型来区分添加的时间单位，type等同于Calendar.XXXX 如：小时Calendar.HOUR_OF_DAY。<br/>
 	 * 暂只支持，DAY_OF_MONTH,HOUR_OF_DAY，MINUTE
 	 * </p>
-	 * @param type 类型
-	 * @param value要新增的值（如果是负数则是减少的值）
-	 * @return 处理后的时间
+	 * 参数 type 类型
+	 * 参数 value要新增的值（如果是负数则是减少的值）
+	 * 返回 处理后的时间
 	 */
 	public static Date addByCurrent(int type, int value) {
 		return addByDate(new Date(), type, value);
@@ -459,10 +438,10 @@ public class DateUtil {
 	 * 根据type类型来区分添加的时间单位，type等同于Calendar.XXXX 如：小时Calendar.HOUR_OF_DAY。<br/>
 	 * 暂只支持，DAY_OF_MONTH,HOUR_OF_DAY，MINUTE
 	 * </p>
-	 * @param date特定时间
-	 * @param type 类型
-	 * @param value 要新增的值（如果是负数则是减少的值）
-	 * @return 处理后的时间
+	 * 参数 date特定时间
+	 * 参数 type 类型
+	 * 参数 value 要新增的值（如果是负数则是减少的值）
+	 * 返回 处理后的时间
 	 */
 	public static Date addByDate(Date date, int type, int value) {
 		Calendar now = Calendar.getInstance();
@@ -473,8 +452,8 @@ public class DateUtil {
 
 	/**
 	 * 格式化观看时间
-	 * @param second 秒
-	 * @return 0时 00分 00秒
+	 * 参数 second 秒
+	 * 返回 0时 00分 00秒
 	 */
 	public static String formatMediaTime(Integer second) {
 		if(second==null){second=0;}
@@ -489,8 +468,8 @@ public class DateUtil {
 	}
 	/**
 	 * 格式化观看时间
-	 * @param second 秒
-	 * @return 0时 00分 00秒
+	 * 参数 second 秒
+	 * 返回 0时 00分 00秒
 	 */
 	public static String formatMediaTime(BigDecimal second) {
 		if(second==null){second=new BigDecimal(0);}
@@ -498,10 +477,10 @@ public class DateUtil {
 	}
 	/**
 	 * 检查两个日期的某个单位的差值，当前支持小时、天数
-	 * @param before 被减数 
-	 * @param after 减数
-	 * @param type 类型，参见Calendar
-	 * @return 值
+	 * 参数 before 被减数 
+	 * 参数 after 减数
+	 * 参数 type 类型，参见Calendar
+	 * 返回 值
 	 */
 	public static int distance(Date before,Date after,int type){
 		if(before == null || after == null){
@@ -548,7 +527,7 @@ public class DateUtil {
 	/**
 	 * @Title formatMinuteSecond 
 	 * @Description 根据秒数返回M分钟S秒
-	 * @param second 秒
+	 * 参数 second 秒
 	 */
 	public static String formatMinuteSecond(Object second){
 		if(second==null) return "—";
@@ -563,8 +542,8 @@ public class DateUtil {
 	
 	/**
 	 * 获取当前日期
-	 * @param pattern
-	 * @return
+	 * 参数 pattern
+	 * 返回
 	 * @throws ParseException
 	 */
 	public static Date getCurrentDate(String pattern) throws ParseException {
@@ -574,7 +553,7 @@ public class DateUtil {
 	
 	/**
 	 * 获取当天的最后一秒
-	 * @return
+	 * 返回
 	 */
 	public static String getTodayLastSecond() {
 		String sToday = format(new Date(), PATTERN_YYYY_MM_DD);
@@ -583,7 +562,7 @@ public class DateUtil {
 	
 	/**
 	 * 获取当天的第一秒
-	 * @return
+	 * 返回
 	 */
 	public static String getTodayFirstSecond() {
 		String sToday = format(new Date(), PATTERN_YYYY_MM_DD);
@@ -592,8 +571,8 @@ public class DateUtil {
 	
 	/**
 	 * 比较两个时间是否是同一周
-	 * @param date1
-	 * @param date2
+	 * 参数 date1
+	 * 参数 date2
 	 */
 	public static boolean isSameWeek(Date date1,Date date2){
 		
@@ -631,7 +610,7 @@ public class DateUtil {
 	
 	/**
 	 * 获得指定日期所在周的第一天
-	 * @param date
+	 * 参数 date
 	 */
 	public static Date getFirstDayOfWeek(Date date) { 
 		 Calendar c = new GregorianCalendar(); 
@@ -644,7 +623,7 @@ public class DateUtil {
 	
 	 /** 
 	 * 取得指定日期上一周的最后一天 
-	 * @param date 
+	 * 参数 date 
 	 */ 
 	 public static Date getLastDayOfWeek(Date date) { 
 		 Calendar c = new GregorianCalendar(); 
@@ -660,10 +639,10 @@ public class DateUtil {
 	  * <p>
 	  * 	该方法会将pattern之外的参数置为0，如yyyy-MM-dd 会将时、分、秒和毫秒置为零
 	  * </p>
-	  * @param source
-	  * @param field
-	  * @param pattern
-	  * @return
+	  * 参数 source
+	  * 参数 field
+	  * 参数 pattern
+	  * 返回
 	  */
 	 public static Date getNextDate(Date source,int field,String pattern){
 		 /**
@@ -687,8 +666,8 @@ public class DateUtil {
 	 
 	 /** 
 	  * 取得指定日期所在周的最后一天的最后一秒
-	  * @param date 
-	  * @return 
+	  * 参数 date 
+	  * 返回 
 	  */ 
 	  public static Date getLastDayOfCurrentWeek(Date date) throws ParseException { 
 		  Calendar c = new GregorianCalendar(); 
@@ -702,8 +681,8 @@ public class DateUtil {
 	  
 	  /** 
 	  * 取得指定日期所在周的最开始一天的最开始一秒
-	  * @param date 
-	  * @return 
+	  * 参数 date 
+	  * 返回 
 	  */ 
 	  public static Date getFirstDayOfCurrentWeek(Date date) throws ParseException { 
 		  Calendar c = new GregorianCalendar(); 
@@ -717,8 +696,8 @@ public class DateUtil {
 	  
 	  /** 
 		  * 取得指定日期当天的开始时间 00:00:00
-		  * @param date 
-		  * @return 
+		  * 参数 date 
+		  * 返回 
 		  */ 
 		  public static Date getBegTimeOfDate(Date date) { 
 			  Calendar calendar = Calendar.getInstance();
@@ -732,8 +711,8 @@ public class DateUtil {
 		  
 		  /** 
 			  * 取得指定日期当天的开始时间 23:59:59
-			  * @param date 
-			  * @return 
+			  * 参数 date 
+			  * 返回 
 			  */ 
 		  public static Date getEndTimeOfDate(Date date) { 
 			  Calendar calendar = Calendar.getInstance();
@@ -749,8 +728,8 @@ public class DateUtil {
 	
 	  /**
 	   * 根据日期取得星期几
-	   * @param date
-	   * @return
+	   * 参数 date
+	   * 返回
 	   */
      public static String getWeek(Date date){  
           String[] weeks = {"星期日","星期一","星期二","星期三","星期四","星期五","星期六"};  
@@ -765,8 +744,8 @@ public class DateUtil {
      /**
  	 * @Title getServiceLimit
  	 * @Description 根据serviceDayLimit获取serviceLimit
- 	 * @param dayNum
- 	 * @return String
+ 	 * 参数 dayNum
+ 	 * 返回 String
  	 * @throws
  	 */
   	private static Calendar fromCal=Calendar.getInstance();
@@ -782,8 +761,8 @@ public class DateUtil {
      
      /**
       * 获取两个指定时间相差的周数,大于为正值，小于为负值
-      * @param start
-      * @param end
+      * 参数 start
+      * 参数 end
       */
      public  static int  getWeekDistance(Date start ,Date end){
     	   Calendar cal1 = Calendar.getInstance();  
@@ -798,7 +777,7 @@ public class DateUtil {
      /**
      * @Title	getDaysOfWeek 
      * @Description	获取某一年某一周的所有日期 例如：2013年第45周是：11月4好到11月10号,并且周一作为每周的第一天
-     * @return Date[]
+     * 返回 Date[]
      */
     public static Date[] getDaysOfWeek(Map<String, Object> map){
     	int mondayPlus = getMondayPlus();
@@ -871,8 +850,8 @@ public class DateUtil {
      
      /**
 	   * 根据日期取得月份
-	   * @param date
-	   * @return
+	   * 参数 date
+	   * 返回
 	   */
     public static String getMonth(Date date){  
          String[] months = {"一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"};  
@@ -887,9 +866,9 @@ public class DateUtil {
     
     /**
      * 比较指定两个时间之间相差的毫秒数
-     * @param date1
-     * @param date2
-     * @return  date1晚于date2时则返回值大于0,反之小于0,相等等于0
+     * 参数 date1
+     * 参数 date2
+     * 返回  date1晚于date2时则返回值大于0,反之小于0,相等等于0
      */
     public static long millisecondsDistance(Date date1,Date date2){
     	//检查日期是否存在
@@ -903,9 +882,9 @@ public class DateUtil {
     
     /**
 	 * 检查是否同一天
-	 * @param target1
-	 * @param target2
-	 * @return
+	 * 参数 target1
+	 * 参数 target2
+	 * 返回
 	 */
 	public static boolean isTheSameDay(Date target1, Date target2){
 		return formatToDay(target1).equals(formatToDay(target2));
@@ -913,11 +892,11 @@ public class DateUtil {
 	
 	/**
 	 * 取得指定日期上的某个具体时间
-	 * @param date
-	 * @param hour 0-23（24小时制）
-	 * @param minute 0-59
-	 * @param second 0-59
-	 * @return
+	 * 参数 date
+	 * 参数 hour 0-23（24小时制）
+	 * 参数 minute 0-59
+	 * 参数 second 0-59
+	 * 返回
 	 */
      public static Date getDateSetTime(Date date, int hour, int minute, int second) { 
          Calendar cal = Calendar.getInstance();

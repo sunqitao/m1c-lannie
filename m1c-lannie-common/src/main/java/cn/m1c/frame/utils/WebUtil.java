@@ -28,10 +28,10 @@ public class WebUtil {
 	
 	/**
 	 * 从Request对象中取出字符串
-	 * @param request
-	 * @param name
-	 * @param defaultValue
-	 * @return
+	 * 参数 request
+	 * 参数 name
+	 * 参数 defaultValue
+	 * 返回
 	 */
 	public static String getStringByRequestParameter(HttpServletRequest request, String name, String defaultValue){
 		String str = request.getParameter(name);
@@ -41,10 +41,10 @@ public class WebUtil {
 	
 	/**
 	 * 从Request对象中取出布尔值
-	 * @param request
-	 * @param name
-	 * @param defaultValue
-	 * @return
+	 * 参数 request
+	 * 参数 name
+	 * 参数 defaultValue
+	 * 返回
 	 */
 	public static boolean getBooleanByRequestParameter(HttpServletRequest request, String name, boolean defaultValue){
 		String value = request.getParameter(name);
@@ -54,10 +54,10 @@ public class WebUtil {
 	
 	/**
 	 * 从Request对象中取出整数
-	 * @param request
-	 * @param name
-	 * @param defaultValue
-	 * @return
+	 * 参数 request
+	 * 参数 name
+	 * 参数 defaultValue
+	 * 返回
 	 */
 	public static Integer getIntByRequestParameter(HttpServletRequest request, String name, Integer defaultValue){
 		String str = request.getParameter(name);
@@ -73,10 +73,10 @@ public class WebUtil {
 	
 	/**
 	 * 从Request对象中取出Long整数
-	 * @param request
-	 * @param name
-	 * @param defaultValue
-	 * @return
+	 * 参数 request
+	 * 参数 name
+	 * 参数 defaultValue
+	 * 返回
 	 */
 	public static Long getLongByRequestParameter(HttpServletRequest request, String name, Long defaultValue){
 		String str = request.getParameter(name);
@@ -94,10 +94,10 @@ public class WebUtil {
 	
 	/**
 	 * 从Request对象中取出Double
-	 * @param request
-	 * @param name
-	 * @param defaultValue
-	 * @return
+	 * 参数 request
+	 * 参数 name
+	 * 参数 defaultValue
+	 * 返回
 	 */
 	public static Double getDoubleByRequestParameter(HttpServletRequest request, String name, Double defaultValue){
 		String str = request.getParameter(name);
@@ -115,11 +115,10 @@ public class WebUtil {
 
 	/**
 	 *
-	 * @param request
-	 * @param isSyncBase64Encoder
-	 * @Deprecated
+	 * 参数 request
+	 * 参数 isSyncBase64Encoder
 	 * @see Webs#getUrl(HttpServletRequest, UrlCodeType)
-	 * @return
+	 * 返回
 	 */
 
 	public static String getUrl(HttpServletRequest request, boolean isSyncBase64Encoder){
@@ -137,9 +136,9 @@ public class WebUtil {
 
 	/**
 	 *
-	 * @param request
-	 * @param urlCodeType
-	 * @return
+	 * 参数 request
+	 * 参数 urlCodeType
+	 * 返回
 	 * @throws UnsupportedEncodingException
 	 */
 	public static String getUrl(HttpServletRequest request, UrlCodeType urlCodeType) throws UnsupportedEncodingException{
@@ -163,9 +162,9 @@ public class WebUtil {
 
 	/**
 	 * 解码url字符串
-	 * @param url
-	 * @param urlCodeType 编码方式
-	 * @return
+	 * 参数 url
+	 * 参数 urlCodeType 编码方式
+	 * 返回
 	 * @throws UnsupportedEncodingException
 	 */
 	public static String parseUrl(String url, UrlCodeType urlCodeType) throws UnsupportedEncodingException{
@@ -183,9 +182,9 @@ public class WebUtil {
 
 	/**
 	 * 获取URL上的参数，但可以忽略指定的参数
-	 * @param request
-	 * @param ignores
-	 * @return
+	 * 参数 request
+	 * 参数 ignores
+	 * 返回
 	 */
 	public static String param(HttpServletRequest request, String...ignoreParams){
 
@@ -238,9 +237,9 @@ public class WebUtil {
 	
 	/**
 	 * 检查验证码
-	 * @param scope 作用域
-	 * @param validateCode  用户输入的验证码
-	 * @return
+	 * 参数 scope 作用域
+	 * 参数 validateCode  用户输入的验证码
+	 * 返回
 	 */
 	public static Boolean isValidateCode(Object scope, String validateCode){
 		return validateCode != null && validateCode.equalsIgnoreCase(getValidateCode(scope));
@@ -261,8 +260,8 @@ public class WebUtil {
 	
 	/**
 	 * 防止站外连接
-	 * @param request
-	 * @return
+	 * 参数 request
+	 * 返回
 	 */
 	public static boolean prohibitOutsideLinking(HttpServletRequest request){
 		String Referer = "";

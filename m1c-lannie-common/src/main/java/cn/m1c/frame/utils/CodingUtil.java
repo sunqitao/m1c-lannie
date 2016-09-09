@@ -28,7 +28,6 @@ public abstract class CodingUtil {
 
 	/**
 	 * 默认编码
-	 * @return String
 	 */
 	public static String getDefaultEncoding(){
 		return Charset.defaultCharset().name();
@@ -36,8 +35,7 @@ public abstract class CodingUtil {
 
 	/**
 	 * MD5加密
-	 * @param origin
-	 * @return 加密后的结果
+	 * 加密后的结果
 	 */
 	public static String MD5Encoding(String origin){
 		return MD5.MD5Encoding(origin);
@@ -45,8 +43,6 @@ public abstract class CodingUtil {
 
 	/**
 	 * Base64编码
-	 * @param input
-	 * @return
 	 */
 	public static String base64Encode(byte[] input) {
 		return new String(Base64.encodeBase64(input));
@@ -58,8 +54,6 @@ public abstract class CodingUtil {
 	 
 	/**
 	 * Base64编码, URL安全(将Base64中的URL非法字符如+,/=转为其他字符, 见RFC3548).
-	 * @param input
-	 * @return
 	 */
 	public static String base64UrlSafeEncode(byte[] input) {
 		return Base64.encodeBase64URLSafeString(input);
@@ -67,8 +61,6 @@ public abstract class CodingUtil {
 	 
 	/**
 	 * Base64解码.
-	 * @param input
-	 * @return
 	 */
 	public static byte[] base64Decode(String input) {
 		return Base64.decodeBase64(input);
@@ -76,9 +68,6 @@ public abstract class CodingUtil {
 	 
 	/**
 	 * URL 编码, Encode默认为UTF-8. 
-	 * @param input
-	 * @return
-	 * @throws UnsupportedEncodingException 
 	 */
 	public static String urlEncode(String input) throws UnsupportedEncodingException {
 			return URLEncoder.encode(input, UTF8);
@@ -86,9 +75,6 @@ public abstract class CodingUtil {
 	 
 	/**
 	 * URL 解码, Encode默认为UTF-8. 
-	 * @param input
-	 * @return
-	 * @throws UnsupportedEncodingException 
 	 */
 	public static String urlDecode(String input) throws UnsupportedEncodingException {
 			return input==null?null:URLDecoder.decode(input, UTF8);

@@ -20,8 +20,6 @@ public abstract class CollectionUtil {
 
 	/**
 	 * 判断集合是否空，
-	 * @param collection
-	 * @return
 	 */
 	public static boolean isEmpty(Collection<?> collection) {
 		return (collection == null || collection.isEmpty());
@@ -33,8 +31,6 @@ public abstract class CollectionUtil {
 	/**
 	 * Return <code>true</code> if the supplied Map is <code>null</code>
 	 * or empty. Otherwise, return <code>false</code>.
-	 * @param map the Map to check
-	 * @return whether the given Map is empty
 	 */
 	public static boolean isEmpty(Map map) {
 		return (map == null || map.isEmpty());
@@ -49,9 +45,9 @@ public abstract class CollectionUtil {
 	 * converted into a List of the appropriate wrapper type.
 	 * <p>A <code>null</code> source value will be converted to an
 	 * empty List.
-	 * @param source the (potentially primitive) array
-	 * @return the converted List result
-	 * @see ObjectUtil#toObjectArray(Object)
+	 * source the (potentially primitive) array
+	 * the converted List result
+	 * ObjectUtil#toObjectArray(Object)
 	 */
 	public static List<?> arrayToList(Object source) {
 		return Arrays.asList(ObjectUtil.toObjectArray(source));
@@ -59,8 +55,8 @@ public abstract class CollectionUtil {
 
 	/**
 	 * Merge the given array into the given Collection.
-	 * @param array the array to merge (may be <code>null</code>)
-	 * @param collection the target Collection to merge the array into
+	 * array the array to merge (may be <code>null</code>)
+	 * collection the target Collection to merge the array into
 	 */
 	public static void mergeArrayIntoCollection(Object array, Collection<Object> collection) {
 		if (collection == null) {
@@ -77,8 +73,8 @@ public abstract class CollectionUtil {
 	 * copying all properties (key-value pairs) over.
 	 * <p>Uses <code>Properties.propertyNames()</code> to even catch
 	 * default properties linked into the original Properties instance.
-	 * @param props the Properties instance to merge (may be <code>null</code>)
-	 * @param map the target Map to merge the properties into
+	 * props the Properties instance to merge (may be <code>null</code>)
+	 * map the target Map to merge the properties into
 	 */
 	public static void mergePropertiesIntoMap(Properties props, Map map) {
 		if (map == null) {
@@ -101,9 +97,9 @@ public abstract class CollectionUtil {
 
 	/**
 	 * Check whether the given Iterator contains the given element.
-	 * @param iterator the Iterator to check
-	 * @param element the element to look for
-	 * @return <code>true</code> if found, <code>false</code> else
+	 * iterator the Iterator to check
+	 * element the element to look for
+	 * <code>true</code> if found, <code>false</code> else
 	 */
 	public static boolean contains(Iterator<?> iterator, Object element) {
 		if (iterator != null) {
@@ -119,9 +115,9 @@ public abstract class CollectionUtil {
 
 	/**
 	 * Check whether the given Enumeration contains the given element.
-	 * @param enumeration the Enumeration to check
-	 * @param element the element to look for
-	 * @return <code>true</code> if found, <code>false</code> else
+	 * enumeration the Enumeration to check
+	 * element the element to look for
+	 * <code>true</code> if found, <code>false</code> else
 	 */
 	
 	public static boolean contains(Enumeration enumeration, Object element) {
@@ -140,9 +136,9 @@ public abstract class CollectionUtil {
 	 * Check whether the given Collection contains the given element instance.
 	 * <p>Enforces the given instance to be present, rather than returning
 	 * <code>true</code> for an equal element as well.
-	 * @param collection the Collection to check
-	 * @param element the element to look for
-	 * @return <code>true</code> if found, <code>false</code> else
+	 * collection the Collection to check
+	 * element the element to look for
+	 * <code>true</code> if found, <code>false</code> else
 	 */
 	
 	public static boolean containsInstance(Collection<?> collection, Object element) {
@@ -159,9 +155,9 @@ public abstract class CollectionUtil {
 	/**
 	 * Return <code>true</code> if any element in '<code>candidates</code>' is
 	 * contained in '<code>source</code>'; otherwise returns <code>false</code>.
-	 * @param source the source Collection
-	 * @param candidates the candidates to search for
-	 * @return whether any of the candidates has been found
+	 * source the source Collection
+	 * candidates the candidates to search for
+	 * whether any of the candidates has been found
 	 */
 	
 	public static boolean containsAny(Collection source, Collection candidates) {
@@ -181,9 +177,9 @@ public abstract class CollectionUtil {
 	 * '<code>source</code>'. If no element in '<code>candidates</code>' is present in
 	 * '<code>source</code>' returns <code>null</code>. Iteration order is
 	 * {@link Collection} implementation specific.
-	 * @param source the source Collection
-	 * @param candidates the candidates to search for
-	 * @return the first present object, or <code>null</code> if not found
+	 * source the source Collection
+	 * candidates the candidates to search for
+	 * the first present object, or <code>null</code> if not found
 	 */
 	
 	public static Object findFirstMatch(Collection source, Collection candidates) {
@@ -200,9 +196,9 @@ public abstract class CollectionUtil {
 
 	/**
 	 * Find a single value of the given type in the given Collection.
-	 * @param collection the Collection to search
-	 * @param type the type to look for
-	 * @return a value of the given type found if there is a clear match,
+	 * collection the Collection to search
+	 * type the type to look for
+	 * a value of the given type found if there is a clear match,
 	 * or <code>null</code> if none or more than one such value found
 	 */
 	
@@ -227,9 +223,9 @@ public abstract class CollectionUtil {
 	 * Find a single value of one of the given types in the given Collection:
 	 * searching the Collection for a value of the first type, then
 	 * searching for a value of the second type, etc.
-	 * @param collection the collection to search
-	 * @param types the types to look for, in prioritized order
-	 * @return a value of one of the given types found if there is a clear match,
+	 * collection the collection to search
+	 * types the types to look for, in prioritized order
+	 * a value of one of the given types found if there is a clear match,
 	 * or <code>null</code> if none or more than one such value found
 	 */
 	public static Object findValueOfType(Collection<?> collection, Class<?>[] types) {
@@ -247,8 +243,8 @@ public abstract class CollectionUtil {
 
 	/**
 	 * Determine whether the given Collection only contains a single unique object.
-	 * @param collection the Collection to check
-	 * @return <code>true</code> if the collection contains a single reference or
+	 * collection the Collection to check
+	 * <code>true</code> if the collection contains a single reference or
 	 * multiple references to the same instance, <code>false</code> else
 	 */
 	
@@ -272,8 +268,8 @@ public abstract class CollectionUtil {
 
 	/**
 	 * Find the common element type of the given Collection, if any.
-	 * @param collection the Collection to check
-	 * @return the common element type, or <code>null</code> if no clear
+	 * collection the Collection to check
+	 * the common element type, or <code>null</code> if no clear
 	 * common type has been found (or the collection was empty)
 	 */
 	
@@ -297,8 +293,8 @@ public abstract class CollectionUtil {
 
 	/**
 	 * Adapts an enumeration to an iterator.
-	 * @param enumeration the enumeration
-	 * @return the iterator
+	 * enumeration the enumeration
+	 * the iterator
 	 */
 	public static <E> Iterator<E> toIterator(Enumeration<E> enumeration) {
 		return new EnumerationIterator<E>(enumeration);

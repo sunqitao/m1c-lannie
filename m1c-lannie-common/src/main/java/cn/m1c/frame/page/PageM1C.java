@@ -56,8 +56,6 @@ public class PageM1C {
 
     /**
      * 
-     * @param currentPage
-     * @param pageSize
      */
     public PageM1C(int pageNo, int pageSize) {
         this.pageNo = pageNo;

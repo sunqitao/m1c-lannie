@@ -25,7 +25,6 @@ public interface Conditions extends Serializable {
 
 	/**
 	 * 获取排序字段
-	 * @return
 	 */
 	public String getOrderField();
 
@@ -47,18 +46,16 @@ public interface Conditions extends Serializable {
 	///////////////////////////////////////////////////Building MongoDB Querrier////////////////////////////////////////////////////////
 	/**
 	 * 创建查询器
-	 * @return
 	 */
 	public Query buildQuery();
 
 	/**
 	 * 创建条件
-	 * @return
 	 */
 	public Criteria buildCriteria();
 
 	///////////////////////////////////////////////////Building Order////////////////////////////////////////////////////////
-	/**
+	/*
 	 * 添加排序字段
 	 * @param addField
 	 * @param isAsc
@@ -70,7 +67,6 @@ public interface Conditions extends Serializable {
 	
 	/**
 	 * 获取排序对象
-	 * @return
 	 */
 	public OrderBean getOrderBean();
 

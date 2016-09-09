@@ -61,8 +61,6 @@ public class RpcResult implements Serializable {
 	
 	/**
 	 * 构造对象
-	 * @param statusCode
-	 * @return
 	 * RpcResult
 	 */
 	public static RpcResult status(StatusCode statusCode){
@@ -71,8 +69,6 @@ public class RpcResult implements Serializable {
 	
 	/**
 	 * 构造对象
-	 * @param statusCode
-	 * @return
 	 * RpcResult
 	 */
 	public static RpcResult status(StatusCode statusCode, String defaultMessage){
@@ -84,7 +80,6 @@ public class RpcResult implements Serializable {
 	
 	/**
 	 * 构造为成功状态对象
-	 * @return
 	 * RpcResult
 	 */
 	public static RpcResult success(){
@@ -93,7 +88,6 @@ public class RpcResult implements Serializable {
 	
 	/**
 	 * 构造为失败状态对象
-	 * @return
 	 * RpcResult
 	 */
 	public static RpcResult fail(){
@@ -103,7 +97,6 @@ public class RpcResult implements Serializable {
 	
 	/**
 	 * 添加一条数组记录
-	 * @return
 	 * RpcResult
 	 */
 	public RpcResult addArray(){
@@ -117,9 +110,6 @@ public class RpcResult implements Serializable {
 	
 	/**
 	 * 添加数据，如果之前已调用addData()方法，则添加到数据组中
-	 * @param key
-	 * @param value
-	 * @return
 	 * RpcResult
 	 */
 	public RpcResult addDatabody(String key, Object value){
@@ -138,9 +128,6 @@ public class RpcResult implements Serializable {
 	
 	/**
 	 * 添加附加属性
-	 * @param key
-	 * @param value
-	 * @return
 	 * RpcResult
 	 */
 	public RpcResult addAttribute(String key, Object value){
@@ -154,7 +141,6 @@ public class RpcResult implements Serializable {
 	
 	/**
 	 * 输出Json值
-	 * @param response
 	 * void
 	 */
 	public void out(HttpServletResponse response){
@@ -175,7 +161,6 @@ public class RpcResult implements Serializable {
 		}
 	}
 	/**
-	 * @param response
 	 * 解决跨域问题
 	 */
 	public void outCrossOrigin(HttpServletResponse response){
@@ -206,8 +191,6 @@ public class RpcResult implements Serializable {
 	
 	/**
 	 * 输出Json值
-	 * @param response
-	 * void
 	 */
 	public void outHtml(HttpServletResponse response){
 		try {
@@ -230,7 +213,6 @@ public class RpcResult implements Serializable {
 	
 	/**
 	 * 切换数据
-	 * void
 	 */
 	private void change(){
 		if(this._databodyMaps != null && this._databodyMaps.size() > 0){
