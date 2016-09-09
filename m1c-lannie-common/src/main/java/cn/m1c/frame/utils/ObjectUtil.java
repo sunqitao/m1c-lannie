@@ -29,7 +29,7 @@ public abstract class ObjectUtil {
 
 	/**
 	 * 检查对象是否为数组类型，包括基本类型数组和对象类型数组
-	 * @param obj the object to check
+	 * 参数 obj the object to check
 	 */
 	public static boolean isArray(Object obj) {
 		return (obj != null && obj.getClass().isArray());
@@ -37,7 +37,7 @@ public abstract class ObjectUtil {
 
 	/**
 	 * 确定是否在给定的数组是空的：即null或长度为零。
-	 * @param array the array to check
+	 * 参数 array the array to check
 	 */
 	public static boolean isEmpty(Object[] array) {
 		return (array == null || array.length == 0);
@@ -45,10 +45,10 @@ public abstract class ObjectUtil {
 
 	/**
 	 * 检查是否在给定的数组包含给定的元素。
-	 * @param array the array to check (may be <code>null</code>,
+	 * 参数 array the array to check (may be <code>null</code>,
 	 * in which case the return value will always be <code>false</code>)
-	 * @param element the element to check for
-	 * @return whether the element has been found in the given array
+	 * 参数 element the element to check for
+	 * 返回 whether the element has been found in the given array
 	 */
 	public static boolean containsElement(Object[] array, Object element) {
 		if (array == null) {
@@ -65,9 +65,9 @@ public abstract class ObjectUtil {
 	/**
 	 * Append the given Object to the given array, returning a new array
 	 * consisting of the input array contents plus the given Object.
-	 * @param array the array to append to (can be <code>null</code>)
-	 * @param obj the Object to append
-	 * @return the new array (of the same component type; never <code>null</code>)
+	 * 参数 array the array to append to (can be <code>null</code>)
+	 * 参数 obj the Object to append
+	 * 返回 the new array (of the same component type; never <code>null</code>)
 	 */
 	public static Object[] addObjectToArray(Object[] array, Object obj) {
 		Class<?> compType = Object.class;
@@ -91,9 +91,9 @@ public abstract class ObjectUtil {
 	 * object array (if necessary of primitive wrapper objects).
 	 * <p>A <code>null</code> source value will be converted to an
 	 * empty Object array.
-	 * @param source the (potentially primitive) array
-	 * @return the corresponding object array (never <code>null</code>)
-	 * @throws IllegalArgumentException if the parameter is not an array
+	 * 参数 source the (potentially primitive) array
+	 * 返回 the corresponding object array (never <code>null</code>)
+	 * 异常 IllegalArgumentException if the parameter is not an array
 	 */
 	public static Object[] toObjectArray(Object source) {
 		if (source instanceof Object[]) {
@@ -128,9 +128,9 @@ public abstract class ObjectUtil {
 	 * <code>null</code>.
 	 * <p>Compares arrays with <code>Arrays.equals</code>, performing an equality
 	 * check based on the array elements rather than the array reference.
-	 * @param o1 first Object to compare
-	 * @param o2 second Object to compare
-	 * @return whether the given objects are equal
+	 * 参数 o1 first Object to compare
+	 * 参数 o2 second Object to compare
+	 * 返回 whether the given objects are equal
 	 * @see java.util.Arrays#equals
 	 */
 	public static boolean nullSafeEquals(Object o1, Object o2) {
@@ -230,8 +230,8 @@ public abstract class ObjectUtil {
 
 	/**
 	 * 返回数组内容的Hask码，当数组为空时返回0
-	 * @param array
-	 * @return
+	 * 参数 array
+	 * 返回
 	 */
 	public static int nullSafeHashCode(Object[] array) {
 		if (array == null) {
@@ -413,8 +413,8 @@ public abstract class ObjectUtil {
 
 	/**
 	 * Return a String representation of an object's overall identity.
-	 * @param obj the object (may be <code>null</code>)
-	 * @return the object's identity as String representation,
+	 * 参数 obj the object (may be <code>null</code>)
+	 * 返回 the object's identity as String representation,
 	 * or an empty String if the object was <code>null</code>
 	 */
 	public static String identityToString(Object obj) {
@@ -426,8 +426,8 @@ public abstract class ObjectUtil {
 
 	/**
 	 * Return a hex String form of an object's identity hash code.
-	 * @param obj the object
-	 * @return the object's identity code in hex notation
+	 * 参数 obj the object
+	 * 返回 the object's identity code in hex notation
 	 */
 	public static String getIdentityHexString(Object obj) {
 		return Integer.toHexString(System.identityHashCode(obj));
@@ -438,8 +438,8 @@ public abstract class ObjectUtil {
 	 * not <code>null</code>; otherwise returns an empty String.
 	 * <p>Differs from {@link #nullSafeToString(Object)} in that it returns
 	 * an empty String rather than "null" for a <code>null</code> value.
-	 * @param obj the object to build a display String for
-	 * @return a display String representation of <code>obj</code>
+	 * 参数 obj the object to build a display String for
+	 * 返回 a display String representation of <code>obj</code>
 	 * @see #nullSafeToString(Object)
 	 */
 	public static String getDisplayString(Object obj) {
@@ -452,8 +452,8 @@ public abstract class ObjectUtil {
 	/**
 	 * Determine the class name for the given object.
 	 * <p>Returns <code>"null"</code> if <code>obj</code> is <code>null</code>.
-	 * @param obj the object to introspect (may be <code>null</code>)
-	 * @return the corresponding class name
+	 * 参数 obj the object to introspect (may be <code>null</code>)
+	 * 返回 the corresponding class name
 	 */
 	public static String nullSafeClassName(Object obj) {
 		return (obj != null ? obj.getClass().getName() : NULL_STRING);
@@ -463,8 +463,8 @@ public abstract class ObjectUtil {
 	 * Return a String representation of the specified Object.
 	 * <p>Builds a String representation of the contents in case of an array.
 	 * Returns <code>"null"</code> if <code>obj</code> is <code>null</code>.
-	 * @param obj the object to build a String representation for
-	 * @return a String representation of <code>obj</code>
+	 * 参数 obj the object to build a String representation for
+	 * 返回 a String representation of <code>obj</code>
 	 */
 	public static String nullSafeToString(Object obj) {
 		if (obj == null) {
@@ -510,8 +510,8 @@ public abstract class ObjectUtil {
 	 * enclosed in curly braces (<code>"{}"</code>). Adjacent elements are separated
 	 * by the characters <code>", "</code> (a comma followed by a space). Returns
 	 * <code>"null"</code> if <code>array</code> is <code>null</code>.
-	 * @param array the array to build a String representation for
-	 * @return a String representation of <code>array</code>
+	 * 参数 array the array to build a String representation for
+	 * 返回 a String representation of <code>array</code>
 	 */
 	public static String nullSafeToString(Object[] array) {
 		if (array == null) {
@@ -541,8 +541,8 @@ public abstract class ObjectUtil {
 	 * enclosed in curly braces (<code>"{}"</code>). Adjacent elements are separated
 	 * by the characters <code>", "</code> (a comma followed by a space). Returns
 	 * <code>"null"</code> if <code>array</code> is <code>null</code>.
-	 * @param array the array to build a String representation for
-	 * @return a String representation of <code>array</code>
+	 * 参数 array the array to build a String representation for
+	 * 返回 a String representation of <code>array</code>
 	 */
 	public static String nullSafeToString(boolean[] array) {
 		if (array == null) {
@@ -573,8 +573,8 @@ public abstract class ObjectUtil {
 	 * enclosed in curly braces (<code>"{}"</code>). Adjacent elements are separated
 	 * by the characters <code>", "</code> (a comma followed by a space). Returns
 	 * <code>"null"</code> if <code>array</code> is <code>null</code>.
-	 * @param array the array to build a String representation for
-	 * @return a String representation of <code>array</code>
+	 * 参数 array the array to build a String representation for
+	 * 返回 a String representation of <code>array</code>
 	 */
 	public static String nullSafeToString(byte[] array) {
 		if (array == null) {
@@ -604,8 +604,8 @@ public abstract class ObjectUtil {
 	 * enclosed in curly braces (<code>"{}"</code>). Adjacent elements are separated
 	 * by the characters <code>", "</code> (a comma followed by a space). Returns
 	 * <code>"null"</code> if <code>array</code> is <code>null</code>.
-	 * @param array the array to build a String representation for
-	 * @return a String representation of <code>array</code>
+	 * 参数 array the array to build a String representation for
+	 * 返回 a String representation of <code>array</code>
 	 */
 	public static String nullSafeToString(char[] array) {
 		if (array == null) {
@@ -635,8 +635,8 @@ public abstract class ObjectUtil {
 	 * enclosed in curly braces (<code>"{}"</code>). Adjacent elements are separated
 	 * by the characters <code>", "</code> (a comma followed by a space). Returns
 	 * <code>"null"</code> if <code>array</code> is <code>null</code>.
-	 * @param array the array to build a String representation for
-	 * @return a String representation of <code>array</code>
+	 * 参数 array the array to build a String representation for
+	 * 返回 a String representation of <code>array</code>
 	 */
 	public static String nullSafeToString(double[] array) {
 		if (array == null) {
@@ -667,8 +667,8 @@ public abstract class ObjectUtil {
 	 * enclosed in curly braces (<code>"{}"</code>). Adjacent elements are separated
 	 * by the characters <code>", "</code> (a comma followed by a space). Returns
 	 * <code>"null"</code> if <code>array</code> is <code>null</code>.
-	 * @param array the array to build a String representation for
-	 * @return a String representation of <code>array</code>
+	 * 参数 array the array to build a String representation for
+	 * 返回 a String representation of <code>array</code>
 	 */
 	public static String nullSafeToString(float[] array) {
 		if (array == null) {
@@ -699,8 +699,8 @@ public abstract class ObjectUtil {
 	 * enclosed in curly braces (<code>"{}"</code>). Adjacent elements are separated
 	 * by the characters <code>", "</code> (a comma followed by a space). Returns
 	 * <code>"null"</code> if <code>array</code> is <code>null</code>.
-	 * @param array the array to build a String representation for
-	 * @return a String representation of <code>array</code>
+	 * 参数 array the array to build a String representation for
+	 * 返回 a String representation of <code>array</code>
 	 */
 	public static String nullSafeToString(int[] array) {
 		if (array == null) {
@@ -730,8 +730,8 @@ public abstract class ObjectUtil {
 	 * enclosed in curly braces (<code>"{}"</code>). Adjacent elements are separated
 	 * by the characters <code>", "</code> (a comma followed by a space). Returns
 	 * <code>"null"</code> if <code>array</code> is <code>null</code>.
-	 * @param array the array to build a String representation for
-	 * @return a String representation of <code>array</code>
+	 * 参数 array the array to build a String representation for
+	 * 返回 a String representation of <code>array</code>
 	 */
 	public static String nullSafeToString(long[] array) {
 		if (array == null) {
@@ -761,8 +761,8 @@ public abstract class ObjectUtil {
 	 * enclosed in curly braces (<code>"{}"</code>). Adjacent elements are separated
 	 * by the characters <code>", "</code> (a comma followed by a space). Returns
 	 * <code>"null"</code> if <code>array</code> is <code>null</code>.
-	 * @param array the array to build a String representation for
-	 * @return a String representation of <code>array</code>
+	 * 参数 array the array to build a String representation for
+	 * 返回 a String representation of <code>array</code>
 	 */
 	public static String nullSafeToString(short[] array) {
 		if (array == null) {
@@ -815,15 +815,15 @@ public abstract class ObjectUtil {
 	public final static String CHARSET_ISO88591 = "ISO-8859-1";
 	
 	/**
-	  * @Title: serialize
-	  * @Description: java对象序列化 <br>
+	  * 标题: serialize
+	  * 描述: java对象序列化 <br>
 	  * eg:<br>
 	  *   Map<String,String> map = new HashMap<String,String>();<br>
 	  *   map.put("test","序列化");<br>
 	  *   String serializedMapStr=SerializeUtil.serialize(map);
-	  * @param original 要进行序列化的java对象
-	  * @return String 序列化的后的值
-	  * @throws IOException
+	  * 参数 original 要进行序列化的java对象
+	  * 返回 String 序列化的后的值
+	  * 异常 IOException
 	  * 
 	  * 
 	  */
@@ -839,16 +839,16 @@ public abstract class ObjectUtil {
 	}
 	
 	/**
-	  * @Title: deserialize
-	  * @Description: 序列化的String对象的反序列化<br>
+	  * 标题: deserialize
+	  * 描述: 序列化的String对象的反序列化<br>
 	  * 需要自己进行强制转换得到最终类型<br> 
 	  * eg:<br>
 	  *   Map newmap = (Map)SerializeUtil.deserialize(serializedMapStr); 
-	  * @param serializedstr 经序列化处理过的信息
-	  * @return Object 反序列化后生成的Object。<br>
-	  * @throws IOException
-	  * @throws UnsupportedEncodingException
-	  * @throws ClassNotFoundException
+	  * 参数 serializedstr 经序列化处理过的信息
+	  * 返回 Object 反序列化后生成的Object。<br>
+	  * 异常 IOException
+	  * 异常 UnsupportedEncodingException
+	  * 异常 ClassNotFoundException
 	  * 
 	  */
 	public static Object deserialize(String serializedstr) throws UnsupportedEncodingException, IOException, ClassNotFoundException{

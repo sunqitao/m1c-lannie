@@ -117,7 +117,7 @@ public class WebUtil {
 	 *
 	 * 参数 request
 	 * 参数 isSyncBase64Encoder
-	 * @see Webs#getUrl(HttpServletRequest, UrlCodeType)
+	 * 链接 Webs#getUrl(HttpServletRequest, UrlCodeType)
 	 * 返回
 	 */
 

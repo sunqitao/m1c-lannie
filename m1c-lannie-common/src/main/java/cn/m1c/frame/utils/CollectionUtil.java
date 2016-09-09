@@ -176,7 +176,7 @@ public abstract class CollectionUtil {
 	 * Return the first element in '<code>candidates</code>' that is contained in
 	 * '<code>source</code>'. If no element in '<code>candidates</code>' is present in
 	 * '<code>source</code>' returns <code>null</code>. Iteration order is
-	 * {@link Collection} implementation specific.
+	 * {链接 Collection} implementation specific.
 	 * source the source Collection
 	 * candidates the candidates to search for
 	 * the first present object, or <code>null</code> if not found

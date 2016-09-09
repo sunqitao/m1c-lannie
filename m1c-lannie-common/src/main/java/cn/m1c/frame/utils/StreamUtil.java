@@ -31,32 +31,32 @@ public final class StreamUtil {
 
 	/**
 	 * Default buffer size for use in
-	 * {@link #copy(InputStream, OutputStream, boolean)}.
+	 * {参照 #copy(InputStream, OutputStream, boolean)}.
 	 */
 	private static final int DEFAULT_BUFFER_SIZE = 8192;
 
 	/**
-	 * Copies the contents of the given {@link InputStream} to the given
-	 * {@link OutputStream}. Shortcut for
+	 * Copies the contents of the given {参照 InputStream} to the given
+	 * {参照 OutputStream}. Shortcut for
 	 *
 	 * <pre>
 	 * copy(pInputStream, pOutputStream, new byte[8192]);
 	 * </pre>
 	 *
-	 * @param pInputStream
+	 * 参数 pInputStream
 	 *            The input stream, which is being read. It is guaranteed, that
-	 *            {@link InputStream#close()} is called on the stream.
-	 * @param pOutputStream
+	 *            {参照 InputStream#close()} is called on the stream.
+	 * 参数 pOutputStream
 	 *            The output stream, to which data should be written. May be
 	 *            null, in which case the input streams contents are simply
 	 *            discarded.
-	 * @param pClose
-	 *            True guarantees, that {@link OutputStream#close()} is called
+	 * 参数 pClose
+	 *            True guarantees, that {参照 OutputStream#close()} is called
 	 *            on the stream. False indicates, that only
-	 *            {@link OutputStream#flush()} should be called finally.
+	 *            {参照 OutputStream#flush()} should be called finally.
 	 *
-	 * @return Number of bytes, which have been copied.
-	 * @throws IOException
+	 * 返回 Number of bytes, which have been copied.
+	 * 异常 IOException
 	 *             An I/O error occurred.
 	 */
 	public static long copy(InputStream pInputStream, OutputStream pOutputStream, boolean pClose) throws IOException {
@@ -66,21 +66,21 @@ public final class StreamUtil {
 	/**
 	 * 将InputStream流中的内容复制到OutputStream中
 	 *
-	 * @param pIn
+	 * 参数 pIn
 	 *            The input stream, which is being read. It is guaranteed, that
-	 *            {@link InputStream#close()} is called on the stream.
-	 * @param pOut
+	 *            {参照 InputStream#close()} is called on the stream.
+	 * 参数 pOut
 	 *            The output stream, to which data should be written. May be
 	 *            null, in which case the input streams contents are simply
 	 *            discarded.
-	 * @param pClose
-	 *            True guarantees, that {@link OutputStream#close()} is called
+	 * 参数 pClose
+	 *            True guarantees, that {参照 OutputStream#close()} is called
 	 *            on the stream. False indicates, that only
-	 *            {@link OutputStream#flush()} should be called finally.
-	 * @param pBuffer
+	 *            {参照 OutputStream#flush()} should be called finally.
+	 * 参数 pBuffer
 	 *            Temporary buffer, which is to be used for copying data.
-	 * @return Number of bytes, which have been copied.
-	 * @throws IOException
+	 * 返回 Number of bytes, which have been copied.
+	 * 异常 IOException
 	 *             An I/O error occurred.
 	 */
 	public static long copy(InputStream pIn, OutputStream pOut, boolean pClose,	byte[] pBuffer) throws IOException {
@@ -120,15 +120,15 @@ public final class StreamUtil {
 
 	/**
 	 * This convenience method allows to read a
-	 * {@link org.apache.commons.fileupload.FileItemStream}'s content into a
+	 * {参照 org.apache.commons.fileupload.FileItemStream}'s content into a
 	 * string. The platform's default character encoding is used for converting
 	 * bytes into characters.
 	 *
-	 * @param pStream
+	 * 参数 pStream
 	 *            The input stream to read.
 	 * @see #asString(InputStream, String)
-	 * @return The streams contents, as a string.
-	 * @throws IOException
+	 * 返回 The streams contents, as a string.
+	 * 异常 IOException
 	 *             An I/O error occurred.
 	 */
 	public static String asString(InputStream pStream) throws IOException {
@@ -156,16 +156,16 @@ public final class StreamUtil {
 	}
 	/**
 	 * This convenience method allows to read a
-	 * {@link org.apache.commons.fileupload.FileItemStream}'s content into a
+	 * {参照 org.apache.commons.fileupload.FileItemStream}'s content into a
 	 * string, using the given character encoding.
 	 *
-	 * @param pStream
+	 * 参数 pStream
 	 *            The input stream to read.
-	 * @param pEncoding
+	 * 参数 pEncoding
 	 *            The character encoding, typically "UTF-8".
 	 * @see #asString(InputStream)
-	 * @return The streams contents, as a string.
-	 * @throws IOException
+	 * 返回 The streams contents, as a string.
+	 * 异常 IOException
 	 *             An I/O error occurred.
 	 */
 	public static String asString(InputStream pStream, String pEncoding) throws IOException {
@@ -176,8 +176,8 @@ public final class StreamUtil {
 
 	/**
 	 * 通过NIO将文本写入文件中
-	 * @param sharSequence
-	 * @param targetFile
+	 * 参数 sharSequence
+	 * 参数 targetFile
 	 */
 	public static void writingCharSequence(String sharSequence, File targetFile){
 		FileOutputStream fileOutputStream = null;
@@ -204,8 +204,8 @@ public final class StreamUtil {
 
 	/**
 	 * 通过NIO将文本写入文件中
-	 * @param sharSequence
-	 * @param targetFile
+	 * 参数 sharSequence
+	 * 参数 targetFile
 	 */
 	public static void writingTextFileChannel(String sharSequence, File targetFile){
 		FileOutputStream fileOutputStream = null;
@@ -236,8 +236,8 @@ public final class StreamUtil {
 
 	/**
 	 * 通过NIO读取文本文件
-	 * @param targetFile
-	 * @return
+	 * 参数 targetFile
+	 * 返回
 	 */
 	public static String readingCharSequence(File targetFile){
 		FileInputStream fileInputStream = null;
@@ -265,9 +265,9 @@ public final class StreamUtil {
 
 	/**
 	 * 从文本文件中读取行
-	 * @param file
-	 * @return
-	 * @throws IOException
+	 * 参数 file
+	 * 返回
+	 * 异常 IOException
 	 */
 	public static List<String> readingLineFormTextFile(File file, String encode) throws IOException{
 		return readingLineFormTextFile(new FileInputStream(file), encode);

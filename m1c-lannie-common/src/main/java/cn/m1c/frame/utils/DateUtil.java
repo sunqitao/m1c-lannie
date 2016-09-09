@@ -22,9 +22,7 @@ public class DateUtil {
 
 	/**
 	 * 日期格式化模式（日期类型数据）
-	 * <p>
 	 * 日期格式化模式，使用此模式将日期格式化为“2012-10-08”，一般用于日期类型数据格式化
-	 * </p>
 	 */
 	public static final String PATTERN_YYYY_MM_DD = "yyyy-MM-dd";
 	public static final String PATTERN_YYYY_MM_DD_P = "yyyy.MM.dd";
@@ -33,9 +31,7 @@ public class DateUtil {
 
 	/**
 	 * 日期格式化模式（日期类型数据）
-	 * <p>
 	 * 日期格式化模式，使用此模式将日期格式化为“10-08”，一般用于日期类型数据格式化
-	 * </p>
 	 */
 	public static final String PATTERN_MM_DD = "MM-dd";
 	public static final String PATTERN_MM_DD_HH_MM = "MM-dd HH:mm";
@@ -45,9 +41,7 @@ public class DateUtil {
 	public static final String PATTERN_UNIT_MMDD = "MM月dd日";
 	/**
 	 * 日期格式化模式（时间类型数据）
-	 * <p>
 	 * 日期格式化模式，使用此模式将日期格式化为“2012-10-08 10:10:08”，一般用于时间类型数据格式化
-	 * </p>
 	 */
 	public static final String PATTERN_YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss";
 	public static final String PATTERN_YYYY_MM_DD_HH_MM_SS_P = "yyyy.MM.dd HH:mm:ss";
@@ -55,16 +49,14 @@ public class DateUtil {
 	public static final String PATTERN_HH_MM = "HH:mm";
 	/**
 	 * 日期格式化模式（时间类型数据），精确到分
-	 * <p>
 	 * 日期格式化模式，使用此模式将日期格式化为“2012-10-08 10:10”，一般用于时间类型数据格式化
-	 * </p>
 	 */
 	public static final String PATTERN_YYYY_MM_DD_HH_MM = "yyyy-MM-dd HH:mm";
 	/**
 	 * 日期格式化模式（时间类型数据），精确到时
-	 * <p>
+	 * 
 	 * 日期格式化模式，使用此模式将日期格式化为“2012-10-08 10”，一般用于时间类型数据格式化
-	 * </p>
+	 * 
 	 */
 	public static final String PATTERN_YYYY_MM_DD_HH = "yyyy-MM-dd HH";
 
@@ -220,13 +212,13 @@ public class DateUtil {
 
 	/**
 	 * 此方法用于前台项目显示当前相差的时间
-	 * <p>
-	 * 该方法用于前台项目中使用，一般用于提问时间等，规则如下（xx为时间，数字）：<br/>
-	 * （当前时间与发布时间）未超过一分钟：则显示秒，即xx秒前；<br/>
-	 * （当前时间与发布时间）未超过一小时：则显示到分钟，即xx分钟前；<br/>
-	 * （当前时间与发布时间）未超过一天（24小时）：则显示到小时，即xx小时前；<br/>
+	 * 
+	 * 该方法用于前台项目中使用，一般用于提问时间等，规则如下（xx为时间，数字）：
+	 * （当前时间与发布时间）未超过一分钟：则显示秒，即xx秒前；
+	 * （当前时间与发布时间）未超过一小时：则显示到分钟，即xx分钟前；
+	 * （当前时间与发布时间）未超过一天（24小时）：则显示到小时，即xx小时前；
 	 * （当前时间与发布时间）超过一天（24小时）：则显示实际发布时间，年-月-日 时:分:秒；
-	 * </p>
+	 * 
 	 *  source 要格式化的日期
 	 * 返回格式化结果
 	 */
@@ -420,10 +412,10 @@ public class DateUtil {
 
 	/**
 	 * 在当前时间的基础上添加特定时间
-	 * <p>
-	 * 根据type类型来区分添加的时间单位，type等同于Calendar.XXXX 如：小时Calendar.HOUR_OF_DAY。<br/>
+	 * 
+	 * 根据type类型来区分添加的时间单位，type等同于Calendar.XXXX 如：小时Calendar.HOUR_OF_DAY。
 	 * 暂只支持，DAY_OF_MONTH,HOUR_OF_DAY，MINUTE
-	 * </p>
+	 * 
 	 * 参数 type 类型
 	 * 参数 value要新增的值（如果是负数则是减少的值）
 	 * 返回 处理后的时间
@@ -434,10 +426,10 @@ public class DateUtil {
 
 	/**
 	 * 在特定时间的基础上添加特定时间
-	 * <p>
-	 * 根据type类型来区分添加的时间单位，type等同于Calendar.XXXX 如：小时Calendar.HOUR_OF_DAY。<br/>
+	 * 
+	 * 根据type类型来区分添加的时间单位，type等同于Calendar.XXXX 如：小时Calendar.HOUR_OF_DAY。
 	 * 暂只支持，DAY_OF_MONTH,HOUR_OF_DAY，MINUTE
-	 * </p>
+	 * 
 	 * 参数 date特定时间
 	 * 参数 type 类型
 	 * 参数 value 要新增的值（如果是负数则是减少的值）
@@ -525,8 +517,8 @@ public class DateUtil {
 	}
 	
 	/**
-	 * @Title formatMinuteSecond 
-	 * @Description 根据秒数返回M分钟S秒
+	 * 标题 formatMinuteSecond 
+	 * 描述 根据秒数返回M分钟S秒
 	 * 参数 second 秒
 	 */
 	public static String formatMinuteSecond(Object second){
@@ -636,9 +628,9 @@ public class DateUtil {
 	 
 	 /**
 	  * 获取特定日历字段的下一个时间点
-	  * <p>
+	  * 
 	  * 	该方法会将pattern之外的参数置为0，如yyyy-MM-dd 会将时、分、秒和毫秒置为零
-	  * </p>
+	  * 
 	  * 参数 source
 	  * 参数 field
 	  * 参数 pattern
@@ -742,8 +734,8 @@ public class DateUtil {
           return weeks[week_index];  
       }  
      /**
- 	 * @Title getServiceLimit
- 	 * @Description 根据serviceDayLimit获取serviceLimit
+ 	 * 标题 getServiceLimit
+ 	 * 描述 根据serviceDayLimit获取serviceLimit
  	 * 参数 dayNum
  	 * 返回 String
  	 * @throws
@@ -775,8 +767,8 @@ public class DateUtil {
      }
      
      /**
-     * @Title	getDaysOfWeek 
-     * @Description	获取某一年某一周的所有日期 例如：2013年第45周是：11月4好到11月10号,并且周一作为每周的第一天
+     * 标题	getDaysOfWeek 
+     * 描述	获取某一年某一周的所有日期 例如：2013年第45周是：11月4好到11月10号,并且周一作为每周的第一天
      * 返回 Date[]
      */
     public static Date[] getDaysOfWeek(Map<String, Object> map){

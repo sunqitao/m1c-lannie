@@ -719,8 +719,8 @@ public abstract class StringUtil {
 	 * <p>
 	 * 比如:
 	 * <ul>
-	 * <li>removeFirst("12345") => 2345
-	 * <li>removeFirst("A") => ""
+	 * <li>removeFirst("12345") ＝》 2345
+	 * <li>removeFirst("A") ＝》 ""
 	 * </ul>
 	 *
 	 * 参数 str
@@ -740,10 +740,10 @@ public abstract class StringUtil {
 	 * <p>
 	 * 比如:
 	 * <ul>
-	 * <li>removeFirst("12345",1) => "2345"
-	 * <li>removeFirst("ABC",'B') => "ABC"
-	 * <li>removeFirst("A",'B') => "A"
-	 * <li>removeFirst("A",'A') => ""
+	 * <li>removeFirst("12345",1) ＝》 "2345"
+	 * <li>removeFirst("ABC",'B') ＝》 "ABC"
+	 * <li>removeFirst("A",'B') ＝》 "A"
+	 * <li>removeFirst("A",'A') ＝》 ""
 	 * </ul>
 	 *
 	 * 参数 str
