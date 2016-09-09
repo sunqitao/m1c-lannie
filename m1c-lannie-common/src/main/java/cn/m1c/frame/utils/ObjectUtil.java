@@ -816,10 +816,9 @@ public abstract class ObjectUtil {
 	
 	/**
 	  * 标题: serialize
-	  * 描述: java对象序列化 <br>
-	  * eg:<br>
-	  *   Map<String,String> map = new HashMap<String,String>();<br>
-	  *   map.put("test","序列化");<br>
+	  * 描述: java对象序列化 
+	  *   Map<String,String> map = new HashMap<String,String>();
+	  *   map.put("test","序列化");
 	  *   String serializedMapStr=SerializeUtil.serialize(map);
 	  * 参数 original 要进行序列化的java对象
 	  * 返回 String 序列化的后的值
@@ -840,12 +839,12 @@ public abstract class ObjectUtil {
 	
 	/**
 	  * 标题: deserialize
-	  * 描述: 序列化的String对象的反序列化<br>
-	  * 需要自己进行强制转换得到最终类型<br> 
-	  * eg:<br>
+	  * 描述: 序列化的String对象的反序列化
+	  * 需要自己进行强制转换得到最终类型 
+	  * eg:
 	  *   Map newmap = (Map)SerializeUtil.deserialize(serializedMapStr); 
 	  * 参数 serializedstr 经序列化处理过的信息
-	  * 返回 Object 反序列化后生成的Object。<br>
+	  * 返回 Object 反序列化后生成的Object。
 	  * 异常 IOException
 	  * 异常 UnsupportedEncodingException
 	  * 异常 ClassNotFoundException

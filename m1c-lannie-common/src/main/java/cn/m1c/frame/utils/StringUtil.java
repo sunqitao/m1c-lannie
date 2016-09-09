@@ -195,7 +195,7 @@ public abstract class StringUtil {
 	}
 
 	/**
-	 * 通过getter&setter方法名取得字段名
+	 * 通过getter&setter方法名取得字段名；
 	 * 参数 getterMethodName
 	 * 返回
 	 */

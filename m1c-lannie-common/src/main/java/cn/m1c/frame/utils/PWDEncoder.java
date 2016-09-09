@@ -9,12 +9,12 @@ public   class PWDEncoder {
 
 	/**
 	 * 
-	 * @param rawPass
-	 * @param sugar
-	 * @return
+	 * 参数 rawPass
+	 * 参数 sugar
+	 * 返回
 	 * String
 	 * 
-	 * @see com.yifangming.person.PassportService#encodePassword(Long objectId, String rawPass, String sugar)
+	 * 链接 com.yifangming.person.PassportService#encodePassword(Long objectId, String rawPass, String sugar)
 	 */
 	public static String encodePassword(String rawPass, String sugar){
 		rawPass = reverse(CodingUtil.MD5Encoding(sugar + rawPass));
@@ -24,13 +24,13 @@ public   class PWDEncoder {
 
 	/**
 	 * 
-	 * @param rawPass
-	 * @param encPass
-	 * @param sugar
-	 * @return
+	 * 参数 rawPass
+	 * 参数 encPass
+	 * 参数 sugar
+	 * 返回
 	 * boolean
 	 * 
-	 * @see com.yifangming.person.PassportService#check(Long objectId, String rawPass, String encPass)
+	 * 链接 com.yifangming.person.PassportService#check(Long objectId, String rawPass, String encPass)
 	 */
 	public static boolean check(String rawPass, String encPass, String sugar) {
 		rawPass = reverse(CodingUtil.MD5Encoding(sugar + rawPass));
@@ -39,8 +39,8 @@ public   class PWDEncoder {
 
 	/**
 	 * 反转字符串
-	 * @param p
-	 * @return
+	 * 参数 p
+	 * 返回
 	 * String
 	 */
 	public static String reverse(String p){

@@ -374,7 +374,7 @@ public class DateUtil {
 	 * 获取指定日期是今年中的第几天
 	 * 参数 dateStr 日期字符串 格式：yyyy-MM-dd
 	 * 返回 指定日期是今年中的第几天
-	 * @note 请不要输入2012-02-31、2012-13-32之类的非法日期字符串
+	 * 标记 请不要输入2012-02-31、2012-13-32之类的非法日期字符串
 	 */
 	public static int getDayOfYear(String dateStr) {
 		Calendar calendar = initCalendarByDateString(dateStr);
