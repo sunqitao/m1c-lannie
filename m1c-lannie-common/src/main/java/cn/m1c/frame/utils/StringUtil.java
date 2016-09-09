@@ -8,11 +8,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @date 2016年7月27日
- * @description 字符串操作的帮助函数
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c softCo.,ltd
- * @since lannie
+ * 2016年7月27日 字符串操作的帮助函数
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public abstract class StringUtil {
 

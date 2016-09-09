@@ -15,11 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @date 2016年7月29日
- * @description 流工具类
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c soft Co.,ltd
- * @since lannie
+ * 2016年7月29日 流工具类
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public final class StreamUtil {
 

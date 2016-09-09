@@ -1,16 +1,9 @@
 package cn.m1c.frame.lannie.test.mongo;
 
-import org.springframework.data.mongodb.repository.Query;
-import org.springframework.data.redis.connection.Message;
-
-import cn.m1c.frame.mongodb.AbstractConditions;
-import cn.m1c.frame.mongodb.MongoDbUtil;
 /**
- * @date 2016年7月31日
- * @description 通过传入的条件查询mongo中的数据
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c soft Co.,ltd
- * @since lannie
+ * 2016年7月31日 通过传入的条件查询mongo中的数据
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public class QueryByConditionFromMongo {
 //	public void queryList(){

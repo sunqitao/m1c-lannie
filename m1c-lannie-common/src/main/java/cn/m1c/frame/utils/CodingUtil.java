@@ -9,10 +9,9 @@ import java.security.MessageDigest;
 import org.apache.commons.codec.binary.Base64;
 
 /**
- * @date 2016年8月3日
- * @description 各种格式的编码加码工具类
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c soft Co.,ltd
+ * 2016年8月3日  各种格式的编码加码工具类
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public abstract class CodingUtil {
 

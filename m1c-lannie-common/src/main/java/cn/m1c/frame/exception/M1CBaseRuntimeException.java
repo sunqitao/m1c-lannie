@@ -1,11 +1,9 @@
 package cn.m1c.frame.exception;
 
 /**
- * @date 2016年7月27日
- * @description 异常基类，所有都为非强制检查异常
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c softCo.,ltd
- * @since lannie
+ * 2016年7月27日 异常基类，所有都为非强制检查异常
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public abstract class M1CBaseRuntimeException extends RuntimeException {
 

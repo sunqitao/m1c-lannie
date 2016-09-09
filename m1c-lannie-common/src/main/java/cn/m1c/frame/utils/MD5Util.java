@@ -4,10 +4,9 @@ import java.security.MessageDigest;
 
 
 /**
- * @date 2016年8月9日
- * @description md5加密
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c soft Co.,ltd
+ * 2016年8月9日  md5加密
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public class MD5Util {
 

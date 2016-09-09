@@ -6,11 +6,9 @@ import org.springframework.data.mongodb.core.query.Query;
 import cn.m1c.frame.utils.StringUtil;
 
 /**
- * @date 2016年7月27日
- * @description 用于mongodb查询
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c softCo.,ltd
- * @since lannie
+ * 2016年7月27日  用于mongodb查询
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public abstract class AbstractConditions implements Conditions {
 

@@ -6,16 +6,11 @@ import java.util.Map;
 import cn.m1c.frame.constants.StatusCode;
 import cn.m1c.frame.exception.M1CRuntimeException;
 
-
-
-
 /**
- * @date 2016年7月27日
- * @description 断言工具类，请结合KuaiCheRuntimeException类使用
+ * 2016年7月27日 断言工具类，请结合KuaiCheRuntimeException类使用
  * @see M1CRuntimeException
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c soft Co.,ltd
- * @since lannie
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public  class AssertUtil {
 

@@ -14,10 +14,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @date 2016年8月9日
- * @description 日期类型的工具类，该类均为静态方法，直接调用
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c soft Co.,ltd
+ * 2016年8月9日 日期类型的工具类，该类均为静态方法，直接调用
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public class DateUtil {
 

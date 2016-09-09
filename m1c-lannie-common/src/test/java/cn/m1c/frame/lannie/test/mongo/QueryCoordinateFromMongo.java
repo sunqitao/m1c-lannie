@@ -1,18 +1,9 @@
 package cn.m1c.frame.lannie.test.mongo;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
-
-import com.mongodb.BasicDBObject;
-import com.mongodb.DBObject;
 /**
- * @date 2016年7月31日
- * @description example 在mongo中 通过空间索引来查询一个坐标点一个半径内的数据
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c soft Co.,ltd
- * @since lannie
+ * 2016年7月31日 example 在mongo中 通过空间索引来查询一个坐标点一个半径内的数据
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public class QueryCoordinateFromMongo {
 	/**

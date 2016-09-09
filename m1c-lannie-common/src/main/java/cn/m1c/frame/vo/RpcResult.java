@@ -14,7 +14,7 @@ import cn.m1c.frame.constants.StatusCode;
 import cn.m1c.frame.utils.StringUtil;
 
 /**
- * 说明:移动客户端返回结果包装<br>
+ * 说明:客户端返回结果包装<br>
  * 
  * 使用示例：<br>
  * 1.失败返回<br>
@@ -37,10 +37,8 @@ import cn.m1c.frame.utils.StringUtil;
  * 5.携带附加值<br>
  * RpcResult.status(StatusCode.success).addArrtibute("pages":10).addArrtibute("total_record":9832).out(response)<br><br>
  * 
- * @author phil
- * @since lannie
- * 
- * 2015年5月6日 上午11:33:58
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public class RpcResult implements Serializable {
 

@@ -7,10 +7,9 @@ import cn.m1c.frame.enums.SafeLevel;
 
 
 /**
- * @date 2016年8月3日
- * @description 
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c soft Co.,ltd
+ * 2016年8月3日 用户密码加密算法
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public final class PassportSecurity {
 

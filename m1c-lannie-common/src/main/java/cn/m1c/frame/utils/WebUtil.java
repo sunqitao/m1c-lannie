@@ -12,10 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
- * @date 2016年8月3日
- * @description action 工具
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c soft Co.,ltd
+ * 2016年8月3日  action 工具
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public class WebUtil {
 

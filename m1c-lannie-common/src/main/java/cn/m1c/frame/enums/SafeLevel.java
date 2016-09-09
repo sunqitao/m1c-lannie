@@ -2,11 +2,9 @@ package cn.m1c.frame.enums;
 
 
 /**
- * @date 2016年7月27日
- * @description  安全级别
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c softCo.,ltd
- * @since lannie
+ * 2016年7月27日  安全级别
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public enum SafeLevel implements BaseEnum<SafeLevel> {
 	LOW("低"),

@@ -4,11 +4,9 @@ import cn.m1c.frame.constants.StatusCode;
 import cn.m1c.frame.utils.StringUtil;
 
 /**
- * @date 2016年7月27日
- * @description 异常基类，所有都为非强制检查异常
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c softCo.,ltd
- * @since lannie
+ * 2016年7月27日  异常基类，所有都为非强制检查异常
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public class M1CRuntimeException extends M1CBaseRuntimeException {
 	

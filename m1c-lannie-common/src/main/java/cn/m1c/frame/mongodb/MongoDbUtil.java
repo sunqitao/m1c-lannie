@@ -15,11 +15,9 @@ import cn.m1c.frame.utils.StringUtil;
 
 
 /**
- * @date 2016年7月27日
- * @description mongoDB工具类
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c softCo.,ltd
- * @since lannie
+ * 2016年7月27日  mongoDB工具类
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public class MongoDbUtil {
 	

@@ -1,10 +1,8 @@
 package cn.m1c.frame.utils;
 /**
- * @date 2016年7月29日
- * @description io tools
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c soft Co.,ltd
- * @since lannie
+ * 2016年7月29日 io tools
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public class IOUtil {
 	public static void close(AutoCloseable... closeable){

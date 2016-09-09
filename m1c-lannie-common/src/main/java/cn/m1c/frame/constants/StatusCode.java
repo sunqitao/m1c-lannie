@@ -1,6 +1,7 @@
 package cn.m1c.frame.constants;
 
 /**
+ * 2016.7.27
  * 说明:全站状态代码<br>
  * 约定：<br>
  * 1.name使用小写，便于直观<br>
@@ -8,8 +9,8 @@ package cn.m1c.frame.constants;
  * 3.所有错误代码均为负数<br>
  * 4.所有正确代码均为正数<br>
  * 5.状态代码*_*_*_*_* 第一个*指代模块名,第二个*指代模块中具体的操作，最后一个*指代错误或者是成功，中间的*指代的是操作错误的原因
- * 2016.7.27
- * @since lannie
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public class StatusCode {
 	

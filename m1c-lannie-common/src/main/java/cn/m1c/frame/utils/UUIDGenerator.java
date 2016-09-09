@@ -1,11 +1,9 @@
 package cn.m1c.frame.utils;
 import java.util.UUID;
 /**
- * @date 2016年7月29日
- * @description m1c id generator tools
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c soft Co.,ltd
- * @since lannie
+ * 2016年7月29日 m1c id generator tools
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public class UUIDGenerator {
  public UUIDGenerator() {

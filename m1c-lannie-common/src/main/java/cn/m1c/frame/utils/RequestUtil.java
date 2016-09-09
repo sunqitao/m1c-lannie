@@ -8,7 +8,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Convenience class for setting and retrieving cookies.
+ * 2016年09月15日 Convenience class for setting and retrieving cookies.
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public final class RequestUtil {
     private static final Log log = LogFactory.getLog(RequestUtil.class);

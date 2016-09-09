@@ -10,11 +10,9 @@ import org.springframework.data.mongodb.core.query.Query;
 
 
 /**
- * @date 2016年7月27日
- * @description 查询条件封装
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c softCo.,ltd
- * @since lannie
+ * 2016年7月27日  查询条件封装
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 //@FunctionalInterface
 public interface Conditions extends Serializable {

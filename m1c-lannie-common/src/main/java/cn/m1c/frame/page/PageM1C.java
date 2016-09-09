@@ -1,11 +1,9 @@
 package cn.m1c.frame.page;
 
 /**
- * @date 2016年7月27日
- * @description mybatis ,mongodb 分页查询
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c softCo.,ltd
- * @since lannie
+ * 2016年7月27日  mybatis ,mongodb 分页查询
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public class PageM1C {
 

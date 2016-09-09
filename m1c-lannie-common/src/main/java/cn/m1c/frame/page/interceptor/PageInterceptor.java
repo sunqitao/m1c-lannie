@@ -30,9 +30,10 @@ import cn.m1c.frame.page.PageM1C;
 
 
 /**
- * 通过拦截<code>StatementHandler</code>的<code>prepare</code>方法，重写sql语句实现物理分页。
+ * 2016年7月27日  通过拦截<code>StatementHandler</code>的<code>prepare</code>方法，重写sql语句实现物理分页。
  * 老规矩，签名里要拦截的类型只能是接口。
- * @since lannie
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 @Intercepts({@Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class})
 })

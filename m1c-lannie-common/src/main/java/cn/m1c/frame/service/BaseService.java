@@ -6,11 +6,9 @@ import cn.m1c.frame.component.DataSource;
 import cn.m1c.frame.dao.IBaseDao;
 import cn.m1c.frame.model.BaseModel;
 /**
- * @date 2016年7月27日
- * @description BaseService
- * @author  phil --> E-mail: s@m1c.cn
- * @corp m1c softCo.,ltd
- * @since lannie
+ * 2016年7月27日 BaseService
+ * @author  phil(s@m1c.cn,m1c softCo.,ltd)
+ * @version lannie
  */
 public interface BaseService {
 	 // 增
