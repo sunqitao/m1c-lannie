@@ -817,9 +817,6 @@ public abstract class ObjectUtil {
 	/**
 	  * 标题: serialize
 	  * 描述: java对象序列化 
-	  *   Map<String,String> map = new HashMap<String,String>();
-	  *   map.put("test","序列化");
-	  *   String serializedMapStr=SerializeUtil.serialize(map);
 	  * 参数 original 要进行序列化的java对象
 	  * 返回 String 序列化的后的值
 	  * 异常 IOException

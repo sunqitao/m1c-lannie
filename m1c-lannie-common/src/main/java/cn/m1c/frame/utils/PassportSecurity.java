@@ -23,8 +23,8 @@ public final class PassportSecurity {
 	/**
 	 * 密码加密
 	 * 明文加密
-	 * @param pwd
-	 * @return String
+	 * 参数 pwd
+	 * 返回 String
 	 */
 	public static String encryptAtWeb(String rawPassword) {
 		return new StringBuilder(CodingUtil.MD5Encoding(WEB_SECURITY + rawPassword)).reverse().toString();
@@ -33,8 +33,8 @@ public final class PassportSecurity {
 	/**
 	 * 密码安全级别算法(未完成)
 	 *  @see getSafeLevelNew
-	 * @param password
-	 * @return SafeLevel
+	 * 参数 password
+	 * 返回 SafeLevel
 	 */
 	@Deprecated
 	public static SafeLevel getSafeLevel(String password) {
@@ -69,8 +69,8 @@ public final class PassportSecurity {
 
 	/**
 	 * 获取密码安全级别
-	 * @param password 密码
-	 * @return 安全级别
+	 * 参数 password 密码
+	 * 返回 安全级别
 	 */
 	public static SafeLevel getSafeLevelNew(String password) {
 		/*
@@ -130,8 +130,8 @@ public final class PassportSecurity {
 	
 	/**
 	 * 是否连续
-	 * @param str 待校验密码
-	 * @return 是否连续
+	 * 参数 str 待校验密码
+	 * 返回 是否连续
 	 */
 	public static boolean isSequenceStr(String str) {
 		//连号
@@ -153,8 +153,8 @@ public final class PassportSecurity {
 	
 	/**
 	 * 获取组合数量
-	 * @param str 待校验字符串
-	 * @return 组合数量
+	 * 参数 str 待校验字符串
+	 * 返回 组合数量
 	 */
 	public static int getCategoryOfChar(String str){
 		int level=0;
