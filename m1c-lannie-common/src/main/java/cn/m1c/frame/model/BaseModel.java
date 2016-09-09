@@ -25,7 +25,7 @@ public abstract class BaseModel implements Serializable{
 	/** 创建时间 **/
 	protected Date created;
 
-	/** 是否已删除-> true:删除，false:未删除 **/
+	/** 是否已删除 true:删除，false:未删除 **/
 	protected Boolean deleted;
 
 	/**
