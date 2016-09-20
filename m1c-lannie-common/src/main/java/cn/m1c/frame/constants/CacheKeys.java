@@ -30,7 +30,7 @@ public abstract class CacheKeys implements Serializable{
     public static final int EXPIRE_30DAY = 30* 24 * 3600;
 		
 		
-	public static <T> String getSingleEntityKey(Class<? extends T> entityClass, long id){
+	public static <T> String getSingleEntityKey(Class<? extends T> entityClass, String id){
 		return String.format(SINGLE_ENTITY, entityClass.getName(), id);
 	}
 }
