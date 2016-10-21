@@ -34,6 +34,9 @@ dependencies {
         exclude group: 'org.springframework' //by both name and group  会携带spring 4.2.3 的相关jar包
 //        exclude module: 'spring-data-commons'//已经是最新版
     }
+    // https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload
+	compile group: 'commons-fileupload', name: 'commons-fileupload', version: '1.3.2'
+    
     compile group: 'log4j', name: 'log4j', version: log4j_version //带着self4j
     compile group: 'org.slf4j', name: 'slf4j-log4j12', version: slf4j_version //带着self4j
     compile group: 'com.alibaba', name: 'fastjson', version: fastjson_version
