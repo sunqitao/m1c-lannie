@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cn.m1c.lannie</groupId>
+	<artifactId>m1c-lannie-app-maven</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>m1c-lannie-app-maven Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/cn.m1c.lannie/m1c-lannie-common -->
+		<dependency>
+			<groupId>cn.m1c.lannie</groupId>
+			<artifactId>m1c-lannie-common</artifactId>
+			<version>1.0.3-RELEASE</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>m1c-lannie-app-maven</finalName>
+		<plugins>  
+        <plugin>  
+            <groupId>org.apache.maven.plugins</groupId>  
+            <artifactId>maven-compiler-plugin</artifactId>  
+            <configuration>  
+                <source>1.7</source>  
+                <target>1.7</target>  
+            </configuration>  
+        </plugin>  
+    </plugins>  
+	</build>
+	
+</project>

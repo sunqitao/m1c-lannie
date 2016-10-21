@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context.xsd
+      http://www.springframework.org/schema/aop 
+  	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+      ">
+	<!-- 引入jdbc配置文件 system-properties-mode 参数默认值是“ENVIRONMENT” 故在导入数据的时候 jdbc的username 
+		老是默认本机name -->
+	<!-- <context:property-placeholder location="classpath:jdbc.properties"
+		system-properties-mode="FALLBACK" /> -->
+	<!-- 扫描文件（自动将servicec层注入） -->
+	<context:component-scan base-package="cn.m1c.*.*.service.impl" />
+	<!-- Loads MongoDB configuraton -->
+	<!-- <import resource="mongodb.xml" /> -->
+	<!-- Loads redix configuraton -->
+	<!-- <import resource="redis.xml" /> -->
+
+
+	<!-- 配置数据库注解aop -->
+	<!-- <aop:aspectj-autoproxy ></aop:aspectj-autoproxy>
+	<bean id="manyDataSourceAspect" class="cn.m1c.wladdr.component.DataSourceAspect" />
+	<aop:config>
+		<aop:aspect id="c" ref="manyDataSourceAspect">
+			<aop:pointcut id="tx"
+				expression="execution(* cn.m1c.*.service.impl.*.*(..))" />
+			<aop:before pointcut-ref="tx" method="before" />
+		</aop:aspect>
+	</aop:config> -->
+	<!-- 配置数据库注解aop -->
+</beans>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+            http://www.springframework.org/schema/data/mongo
+			http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+            http://www.springframework.org/schema/tx
+            http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+            http://www.springframework.org/schema/util
+            http://www.springframework.org/schema/util/spring-util-4.0.xsd
+            ">
+	 <!-- mongodb bean的仓库目录，会自动扫描扩展了MongoRepository接口的接口进行注入 -->  
+	<mongo:repositories base-package="cn.m1c.wladdr.model" />
+	<!-- MongoDB Master -->
+	<mongo:mongo host="db.m1c.cn" port="27017" id="master_mongo">
+		<mongo:options connections-per-host="2"
+			threads-allowed-to-block-for-connection-multiplier="2"
+			connect-timeout="5000"
+			max-wait-time="10000"
+			auto-connect-retry="true"
+			socket-keep-alive="true"
+			socket-timeout="8000"
+			slave-ok="false"
+			write-number="10"
+			write-timeout="0"
+			write-fsync="true" />
+	</mongo:mongo><!-- username="kuaiche" password="sfxd1605"  -->
+	<mongo:db-factory id="masterMongoDbFactory" mongo-ref="master_mongo" dbname="wladdr_db" write-concern="SAFE"  /><!-- username="kuaiche_message_sa" password="xxx" write-concern="SAFE" -->
+  	<bean id="masterMappingContext"   class="org.springframework.data.mongodb.core.mapping.MongoMappingContext"/>
+	<bean id="masterMappingConverter" class="org.springframework.data.mongodb.core.convert.MappingMongoConverter">
+  		<constructor-arg ref="masterMongoDbFactory" />
+    	<constructor-arg ref="masterMappingContext" />
+  	</bean>
+	<bean id="masterMongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg name="mongoDbFactory" ref="masterMongoDbFactory"/>
+		<constructor-arg name="mongoConverter" ref="masterMappingConverter" />
+		<property name="writeConcern">
+			<util:constant static-field="com.mongodb.WriteConcern.SAFE" />
+		</property>
+		<property name="writeResultChecking" value="EXCEPTION" />
+	</bean>
+	
+	<!-- Slave 
+	<mongo:mongo host="geo.mongodb.slave.56kuaiche.com" port="27018" id="slave_mongo">
+		<mongo:options connections-per-host="2"
+			threads-allowed-to-block-for-connection-multiplier="2"
+			connect-timeout="5000"
+			max-wait-time="10000"
+			auto-connect-retry="true"
+			socket-keep-alive="true"
+			socket-timeout="8000"
+			slave-ok="true"
+			write-number="10"
+			write-timeout="0"
+			write-fsync="true" />
+	</mongo:mongo>username="kuaiche_slave" password="sfxd1605"  -->
+	<!-- <mongo:db-factory id="slaveMongoDbFactory" mongo-ref="slave_mongo" dbname="kuaiche_geo" write-concern="SAFE"/>username="kuaiche_message_sa" password="xxx" write-concern="SAFE"
+  	<bean id="slaveMappingContext"   class="org.springframework.data.mongodb.core.mapping.MongoMappingContext"/>
+	<bean id="slaveMappingConverter" class="org.springframework.data.mongodb.core.convert.MappingMongoConverter">
+  		<constructor-arg ref="slaveMongoDbFactory" />
+    	<constructor-arg ref="slaveMappingContext" />
+  	</bean>
+	<bean id="slaveMongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg name="mongoDbFactory" ref="slaveMongoDbFactory"/>
+		<constructor-arg name="mongoConverter" ref="slaveMappingConverter" />
+		<property name="writeConcern">
+			<util:constant static-field="com.mongodb.WriteConcern.SAFE" />
+		</property>
+		<property name="writeResultChecking" value="EXCEPTION" />
+	</bean> -->
+	
+</beans>
