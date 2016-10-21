@@ -1,5 +1,5 @@
 group 'cn.m1c.lannie'
-version '1.0.2-RELEASE'
+version '1.0.3-RELEASE'
 
 apply plugin: 'java'
 apply plugin :'maven'//添加Maven插件
