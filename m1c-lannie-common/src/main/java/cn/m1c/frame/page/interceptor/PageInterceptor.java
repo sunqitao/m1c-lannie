@@ -35,7 +35,7 @@ import cn.m1c.frame.page.PageM1C;
  * @author  phil(s@m1c.cn,m1c softCo.,ltd)
  * @version lannie
  */
-@Intercepts({@Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class})
+@Intercepts({@Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class,Integer.class})
 })
 public class PageInterceptor implements Interceptor {
     private static final Log logger = LogFactory.getLog(PageInterceptor.class);
