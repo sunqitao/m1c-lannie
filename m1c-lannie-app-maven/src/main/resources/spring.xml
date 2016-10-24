@@ -32,4 +32,18 @@
 		</aop:aspect>
 	</aop:config> -->
 	<!-- 配置数据库注解aop -->
+	
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+    <property name="messageConverters"><!-- 装配数据转换器 -->
+        <list>
+            <ref bean="jsonConverter" /><!-- 指定装配json格式的数据转换器 -->
+        </list>
+    </property>
+</bean>
+
+<bean id="jsonConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+    <!-- 使用MappingJacksonHttpMessageConverter完成json数据转换 -->
+    <property name="supportedMediaTypes" value="application/json" />
+    <!-- 设置转换的media类型为application/json -->
+</bean>
 </beans>
