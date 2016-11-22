@@ -1,5 +1,5 @@
 group 'cn.m1c.lannie'
-version '1.0.5-RELEASE'
+version '1.0.6-RELEASE'
 
 apply plugin: 'java'
 apply plugin :'maven'//添加Maven插件
@@ -154,7 +154,7 @@ afterEvaluate { project ->
     }
 
     signing {
-        required { isReleaseBuild() && gradle.taskGraph.hasTask("uploadArchives") }
+       // required { isReleaseBuild() && gradle.taskGraph.hasTask("uploadArchives") }
         sign configurations.archives
     }
     
