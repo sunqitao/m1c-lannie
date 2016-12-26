@@ -898,4 +898,44 @@ public class DateUtil {
          cal.set(Calendar.SECOND, second);
          return cal.getTime(); 
      }
+     /**
+      * 
+      * @param dateTime
+      * @return 格式话的数据，主要用于未读消息产生时间 类似未读微博显示的时间
+      */
+     public static String getInterval(Date dateTime) {   
+         String interval = null;  
+         long time =  System.currentTimeMillis()- dateTime.getTime();// 得出的时间间隔是毫秒  
+         if(time/1000 < 10 && time/1000 >= 0) {  
+         //如果时间间隔小于10秒则显示“刚刚”time/10得出的时间间隔的单位是秒  
+             interval ="刚刚";  
+         } else if(time/1000 < 60 && time/1000 > 0) {  
+         //如果时间间隔小于60秒则显示多少秒前  
+             int se = (int) ((time%60000)/1000);  
+             interval = se + "秒前";  
+         }else if(time/60000 < 60 && time/60000 > 0) {  
+         //如果时间间隔小于60分钟则显示多少分钟前  
+             int m = (int) ((time%3600000)/60000);//得出的时间间隔的单位是分钟  
+             interval = m + "分钟前";  
+         }else if(time/3600000 < 24 && time/3600000 >= 0) {  
+         //如果时间间隔小于24小时则显示多少小时前  
+             int h = (int) (time/3600000);//得出的时间间隔的单位是小时  
+             interval = h + "小时前";  
+         } else if(time/86400000 < 7 && time/86400000 >= 0 ) {  
+         //如果时间间隔小于7天小时则显示多少天前  
+             int h = (int) (time/86400000);//得出的时间间隔的单位是天 
+             interval = h + "天前";  
+         } else {  
+             interval = format(dateTime,PATTERN_YYYY_MM_DD_HH_MM);  
+         }
+         return interval;  
+     }  
+//     public static void main(String[] args) {
+//		try {
+//			System.out.println(DateUtil.getInterval(DateUtil.parse("2016-12-18 15:04", PATTERN_YYYY_MM_DD_HH_MM)));
+//		} catch (ParseException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 }
