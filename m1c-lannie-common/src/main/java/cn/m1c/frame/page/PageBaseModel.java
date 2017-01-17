@@ -1,13 +1,18 @@
 package cn.m1c.frame.page;
 
+import cn.m1c.frame.model.BaseModel;
+
 /**
  * 2016年7月27日  mybatis ,mongodb 分页查询
  * @author  phil(s@m1c.cn,m1c softCo.,ltd)
  * @version lannie
  */
-public class PageM1C {
-
-    public static final int DEFAULT_PAGE_SIZE = 10;
+public class PageBaseModel extends BaseModel{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -7931652649038833340L;
+	public static final int DEFAULT_PAGE_SIZE = 10;
 //每页数量
     private int pageSize;
 //    当前页码
@@ -49,7 +54,7 @@ public class PageM1C {
 		this.orderBy = orderBy;
 	}
 
-	public PageM1C() {
+	public PageBaseModel() {
         this.pageNo = 1;
         this.pageSize = DEFAULT_PAGE_SIZE;
     }
@@ -57,7 +62,7 @@ public class PageM1C {
     /**
      * 
      */
-    public PageM1C(int pageNo, int pageSize) {
+    public PageBaseModel(int pageNo, int pageSize) {
         this.pageNo = pageNo;
         this.pageSize = pageSize;
     }

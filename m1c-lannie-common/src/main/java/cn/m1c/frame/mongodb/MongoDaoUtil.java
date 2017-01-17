@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.query.Update;
 
 import com.mongodb.DBCollection;
 
-import cn.m1c.frame.page.PageM1C;
+import cn.m1c.frame.page.PageBaseModel;
 import cn.m1c.frame.utils.CollectionUtil;
 import cn.m1c.frame.utils.StringUtil;
 
@@ -33,7 +33,7 @@ public abstract class MongoDaoUtil {
 	/**
 	 * 绑定分页
 	 */
-	public static void bindPaging(Class<?> entityName, MongoOperations mongoOperations, Query query, PageM1C page){
+	public static void bindPaging(Class<?> entityName, MongoOperations mongoOperations, Query query, PageBaseModel page){
 		if(page == null){
 			return;
 		}
@@ -44,7 +44,7 @@ public abstract class MongoDaoUtil {
 		query.skip(page.getStartNum()).limit(page.getPageSize());
 	}
 	
-	public static void bindPaging(DBCollection dbCollection, MongoOperations mongoOperations, Query query, PageM1C page){
+	public static void bindPaging(DBCollection dbCollection, MongoOperations mongoOperations, Query query, PageBaseModel page){
 		if(page == null){
 			return;
 		}

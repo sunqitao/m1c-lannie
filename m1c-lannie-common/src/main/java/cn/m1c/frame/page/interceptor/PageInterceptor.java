@@ -26,7 +26,7 @@ import org.apache.ibatis.reflection.wrapper.ObjectWrapperFactory;
 import org.apache.ibatis.scripting.defaults.DefaultParameterHandler;
 import org.apache.ibatis.session.RowBounds;
 
-import cn.m1c.frame.page.PageM1C;
+import cn.m1c.frame.page.PageBaseModel;
 
 
 /**
@@ -85,7 +85,7 @@ public class PageInterceptor implements Interceptor {
             if (parameterObject == null) {
                 throw new NullPointerException("parameterObject is null!");
             } else {
-                PageM1C page = (PageM1C) metaStatementHandler
+                PageBaseModel page = (PageBaseModel) metaStatementHandler
                         .getValue("delegate.boundSql.parameterObject");
                 String sql = boundSql.getSql();
                 sql.replace(";", " ");
@@ -109,7 +109,7 @@ public class PageInterceptor implements Interceptor {
      * <code>PageParameter</code>获得相关信息。
      */
     private void setPageParameter(String sql, Connection connection, MappedStatement mappedStatement,
-            BoundSql boundSql, PageM1C page) {    	
+            BoundSql boundSql, PageBaseModel page) {    	
         // 记录总记录数
         String countSql = "select count(0) from (" + sql + ") as total";
         PreparedStatement countStmt = null;
@@ -157,7 +157,7 @@ public class PageInterceptor implements Interceptor {
     /**
      * 根据数据库类型，生成特定的分页sql
      */
-    private String buildPageSql(String sql, PageM1C page) {
+    private String buildPageSql(String sql, PageBaseModel page) {
         if (page != null) {
             StringBuilder pageSql = new StringBuilder();
             if ("mysql".equals(dialect)) {
@@ -176,7 +176,7 @@ public class PageInterceptor implements Interceptor {
     /**
      * mysql的分页语句
      */
-    public StringBuilder buildPageSqlForMysql(String sql, PageM1C page) {
+    public StringBuilder buildPageSqlForMysql(String sql, PageBaseModel page) {
         StringBuilder pageSql = new StringBuilder(100);
         String beginrow = String.valueOf((page.getPageNo() - 1) * page.getPageSize());
         pageSql.append(sql);
@@ -188,7 +188,7 @@ public class PageInterceptor implements Interceptor {
      * 参考hibernate的实现完成oracle的分页
      * 
      */
-    public StringBuilder buildPageSqlForOracle(String sql, PageM1C page) {
+    public StringBuilder buildPageSqlForOracle(String sql, PageBaseModel page) {
         StringBuilder pageSql = new StringBuilder(100);
         String beginrow = String.valueOf((page.getPageNo() - 1) * page.getPageSize());
         String endrow = String.valueOf(page.getPageNo() * page.getPageSize());

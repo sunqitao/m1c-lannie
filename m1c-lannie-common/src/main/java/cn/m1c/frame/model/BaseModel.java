@@ -5,21 +5,23 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import cn.m1c.frame.page.PageM1C;
+import org.springframework.data.annotation.Id;
 
 
 /**
  * 2016年7月27日 部分实体公共属性如创建时间，修改时间
  * 2016年10月22日 直接继承分页查询
+ * change 将分页变为该类的子类 如果有需要分页的请将直接执行 PageBaseModel
  * @author  phil(s@m1c.cn,m1c softCo.,ltd)
  * @version lannie
  */
-public abstract class BaseModel extends PageM1C implements Serializable{
+public abstract class BaseModel implements Serializable{
 
 	private static final long serialVersionUID = -5919409541334409856L;
 /**
  * use UUIDGenerator.getUUId() 
  */
+	@Id
 	protected String id;
 	
 	/** 更新时间 **/
